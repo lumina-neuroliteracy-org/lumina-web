@@ -1,7 +1,9 @@
+import ComingSoonPage from "@/components/ComingSoonPage";
+
 export default function SignupPage() {
   return (
     <>
-      <h1>This is sign up</h1>
+        <ComingSoonPage />
     </>
   );
 }

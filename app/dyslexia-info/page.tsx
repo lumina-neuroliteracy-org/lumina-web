@@ -1,9 +1,9 @@
+import ComingSoonPage from "@/components/ComingSoonPage";
+
 export default function DyslexiaInfoPage() {
   return (
     <>
-      <h1>
-        This is Dyslexia Info
-      </h1>
+        <ComingSoonPage  />
     </>
   );
 }

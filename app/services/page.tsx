@@ -1,7 +1,9 @@
+import ComingSoonPage from "@/components/ComingSoonPage";
+
 export default function ServicesPage() {
   return (
     <>
-      <h1>This is services</h1>
+        <ComingSoonPage />
     </>
   );
 }
