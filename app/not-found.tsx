@@ -11,7 +11,7 @@ export const metadata: Metadata = {
 
 export default function NotFound() {
     return (
-        <div className="mx-auto flex min-h-[calc(100vh-4rem)] max-w-7xl flex-col items-center justify-center px-5 py-24 text-center sm:px-8">
+        <div className="mx-auto flex min-h-screen max-w-7xl flex-col items-center justify-center px-5 py-24 text-center sm:px-8">
             <AnimateIn delay={0}>
                 <div className="inline-flex size-20 items-center justify-center rounded-full border border-brand-gold/40 bg-brand-ivory">
                     <SearchX className="size-9 text-brand-navy" />

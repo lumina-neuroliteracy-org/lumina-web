@@ -1,11 +1,6 @@
 import type { Metadata } from "next";
 import { Geist, Geist_Mono, Lexend } from "next/font/google";
 import "./globals.css";
-import { SidebarProvider } from "@/components/ui/sidebar";
-import { Navbar } from "@/components/navigation/Navbar";
-import { MobileNavSidebar } from "@/components/navigation/MobileNavSideBar";
-import Footer from "@/components/Footer";
-import { DyslexiaProvider } from "@/components/DyslexiaProvider";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -38,16 +33,7 @@ export default function RootLayout({
       className={`${geistSans.variable} ${geistMono.variable} ${lexend.variable} h-full antialiased`}
     >
       <body className="min-h-full bg-brand-surface text-foreground">
-        <DyslexiaProvider>
-          <SidebarProvider defaultOpen={false} className="flex-col w-full">
-            <MobileNavSidebar />
-            <Navbar />
-            <main id="main-content" className="flex-1">
-              {children}
-            </main>
-            <Footer />
-          </SidebarProvider>
-        </DyslexiaProvider>
+        {children}
       </body>
     </html>
   );
