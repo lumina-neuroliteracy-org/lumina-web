@@ -1,9 +1,11 @@
-import ComingSoonPage from "@/components/ComingSoonPage";
+import ContactHero from "@/components/contact/ContactHero";
+import ContactBody from "@/components/contact/ContactBody";
 
 export default function ContactPage() {
   return (
-    <>
-        <ComingSoonPage />
-    </>
+    <main className="bg-brand-surface">
+      <ContactHero />
+      <ContactBody />
+    </main>
   );
 }
