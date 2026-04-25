@@ -14,7 +14,7 @@ export default function AboutSpecialist() {
             <div className="grid gap-10 lg:grid-cols-[1fr_1.2fr] lg:items-center">
                 <AnimateIn direction="left">
                     <Image
-                        src="/specialist.jpg"
+                        src="/tutor.png"
                         alt="Luminar specialist"
                         width={480}
                         height={560}
