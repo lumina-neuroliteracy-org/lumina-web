@@ -5,16 +5,16 @@ import { Play, CalendarCheck } from "lucide-react";
 
 export default function AboutHero() {
     return (
-        <section className="relative h-[70vh] min-h-[480px] w-full overflow-hidden">
+        <section className="relative h-[70vh] min-h-120 w-full overflow-hidden">
             <Image
-                src="/about-hero.jpg"
+                src="/hero-one.jpg"
                 alt="Luminar specialist working with a learner"
                 fill
                 className="object-cover object-center"
                 priority
             />
             {/* Overlay */}
-            <div className="absolute inset-0 bg-brand-navy/65" />
+            <div className="absolute inset-0 bg-brand-navy/40" />
 
             {/* Content */}
             <div className="absolute inset-0 flex flex-col items-center justify-center px-5 text-center sm:px-8">

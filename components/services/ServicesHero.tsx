@@ -5,15 +5,15 @@ import { CalendarCheck } from "lucide-react";
 
 export default function ServicesHero() {
     return (
-        <section className="relative h-[60vh] min-h-[420px] w-full overflow-hidden">
+        <section className="relative h-[60vh] min-h-105 w-full overflow-hidden">
             <Image
-                src="/services-hero.jpg"
+                src="/hero-one.jpg"
                 alt="Luminar specialist session in progress"
                 fill
                 className="object-cover object-center"
                 priority
             />
-            <div className="absolute inset-0 bg-brand-navy/65" />
+            <div className="absolute inset-0 bg-brand-navy/40" />
 
             <div className="absolute inset-0 flex flex-col items-center justify-center px-5 text-center sm:px-8">
                 <p className="text-sm font-semibold uppercase tracking-[0.18em] text-brand-gold">
