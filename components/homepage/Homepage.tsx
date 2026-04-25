@@ -3,6 +3,7 @@ import VideoSection from "./VideoSection";
 import HeroServices from "./Services";
 import WhyChooseUs from "./WhyChooseUs";
 import ContactBanner from "./ContactBanner";
+import AboutTestimonials from "../about/AboutTestimonials";
 
 export default function Homepage() {
   return (
@@ -10,8 +11,9 @@ export default function Homepage() {
       <Hero />
       <VideoSection />
       <HeroServices />
-      <WhyChooseUs />
       <ContactBanner />
+      <WhyChooseUs />
+      <AboutTestimonials />
     </main>
   );
 }
