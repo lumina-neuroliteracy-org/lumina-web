@@ -1,4 +1,4 @@
-import { Link } from "lucide-react";
+import Link from "next/link";
 import { Button } from "../ui/button";
 
 const serviceCards = [
@@ -21,13 +21,13 @@ const serviceCards = [
 
 export default function HeroServices() {
     return (
-        <section className="mx-auto w-full max-w-7xl px-5 py-10 sm:px-8 lg:py-16">
+        <section className="mx-auto w-full max-w-6xl px-5 py-10 sm:px-8 lg:py-16">
             <div className="flex flex-col gap-8 lg:flex-row lg:items-end lg:justify-between">
                 <div className="max-w-2xl">
-                    <p className="text-sm font-semibold tracking-[0.18em] uppercase text-brand-gold-strong">
+                    <p className="text-sm lg:text-lg font-semibold tracking-[0.18em] uppercase text-brand-gold-strong">
                         Services
                     </p>
-                    <h2 className="mt-3 text-3xl font-semibold tracking-tight text-brand-navy">
+                    <h2 className="mt-3 text-3xl lg:text-4xl  font-semibold tracking-tight text-brand-navy">
                         Practical help for every stage of the journey.
                     </h2>
                 </div>

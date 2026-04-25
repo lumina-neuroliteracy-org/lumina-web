@@ -5,7 +5,7 @@ import { AnimateIn } from "../AnimateIn";
 
 export default function Hero() {
     return (
-        <section className="mx-auto grid w-full max-w-7xl gap-12 px-5 py-16 sm:px-8 lg:grid-cols-[1.15fr_0.85fr] lg:items-center lg:pb-12">
+        <section className="mx-auto grid w-full max-w-6xl gap-12 px-5 py-16 sm:px-8 lg:grid-cols-[1.15fr_0.85fr] lg:items-center lg:pb-12">
             <div className="max-w-2xl">
                 <AnimateIn delay={0}>
                     <div className="inline-flex items-center gap-2 rounded-full border border-brand-gold/40 bg-brand-ivory px-4 py-1.5 text-sm text-brand-navy">

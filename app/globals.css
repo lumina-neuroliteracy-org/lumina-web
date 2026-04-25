@@ -61,8 +61,8 @@
 }
 
 :root {
-  --brand-navy: #051a64;
-  --brand-navy-soft: #0a2b8a;
+  --brand-navy: #0E82DF;
+  --brand-navy-soft: #0E82DF;
   --brand-gold: #d4af37;
   --brand-gold-strong: #b8921f;
   --brand-gold-soft: #f4e8bf;
@@ -151,5 +151,33 @@
   }
   html {
     @apply font-sans;
+    transition: background-color 0.25s ease;
   }
+}
+
+/* Dyslexia mode — toggled via .dyslexia on <html> */
+html.dyslexia {
+  --font-sans: var(--font-lexend);
+  --brand-surface: #f8f8f4;
+  --brand-card: #fffffe;
+  font-size: 17px;
+}
+
+html.dyslexia *,
+html.dyslexia *::before,
+html.dyslexia *::after {
+  font-family: var(--font-lexend), sans-serif;
+  letter-spacing: 0.02em;
+  word-spacing: 0.1em;
+  transition: font-family 0.25s ease, letter-spacing 0.25s ease, line-height 0.25s ease;
+}
+
+html.dyslexia p,
+html.dyslexia li,
+html.dyslexia span,
+html.dyslexia a,
+html.dyslexia label,
+html.dyslexia td,
+html.dyslexia th {
+  line-height: 1.85;
 }

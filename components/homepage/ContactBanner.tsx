@@ -4,7 +4,7 @@ import { AnimateIn } from "../AnimateIn";
 
 export default function ContactBanner() {
     return (
-        <section className="mx-auto w-full max-w-7xl px-5 py-10 sm:px-8 lg:py-16">
+        <section className="mx-auto w-full max-w-6xl px-5 py-10 sm:px-8 lg:py-16">
             <AnimateIn>
                 <div className="rounded-[2rem] border border-brand-gold/40 bg-brand-ivory px-6 py-8 sm:px-8 lg:flex lg:items-center lg:justify-between">
                     <AnimateIn delay={0.2}>

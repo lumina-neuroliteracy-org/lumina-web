@@ -7,9 +7,12 @@ import { Button } from "@/components/ui/button";
 import { useSidebar } from "@/components/ui/sidebar";
 import Image from "next/image";
 import logo from "@/public/lumina-logo.png";
+import { LayoutGrid } from "lucide-react";
+import DyslexiaToggle from "@/components/DyslexiaToggle";
 
 const navLinks = [
     { label: "About", href: "/about" },
+    { href: "/services", label: "Services", icon: LayoutGrid },
     { label: "Dyslexia Info", href: "/dyslexia-info" },
     { label: "Contact", href: "/contact" },
 ];
@@ -31,11 +34,15 @@ export function Navbar() {
             className={`sticky top-0 z-40 w-full bg-brand-navy-soft transition-shadow duration-300 ${scrolled ? "shadow-sm" : ""
                 }`}
         >
-            <div className="mx-auto flex max-w-7xl items-center justify-between px-6 py-4 lg:px-10">
-                <div>
+            <div className="mx-auto flex max-w-6xl items-center justify-between px-6 py-4 lg:px-10">
+                <div className="flex items-center gap-3">
                     <Link href="/" className="flex gap-2">
                         <Image src={logo} alt="Loger logo" width={80} height={40} />
                     </Link>
+                    <div className="hidden text-sm font-semibold text-brand-gold lg:block">
+                        <h3>LUMINA</h3>
+                        <p>THE NEURO-LITERACY STUDIO</p>
+                    </div>
                 </div>
 
                 {/* Desktop nav */}
@@ -58,6 +65,7 @@ export function Navbar() {
                 </nav>
 
                 <div className="flex items-center gap-2">
+                    <DyslexiaToggle />
                     {/* Desktop CTA */}
                     <Button asChild className="hidden rounded-full lg:inline-flex font-semibold text-xs px-4 py-2 bg-brand-gold text-brand-navy hover:bg-transparent  hover:text-white">
                         <Link href="/login">Login</Link>
