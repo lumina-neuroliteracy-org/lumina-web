@@ -3,6 +3,12 @@ import { AnimateIn } from "@/components/AnimateIn";
 import { Button } from "@/components/ui/button";
 import { MessageCircle, ClipboardList, GraduationCap, FileText, type LucideIcon } from "lucide-react";
 
+interface PriceTier {
+    label: string;
+    total: string;
+    perSession?: string;
+}
+
 interface Service {
     icon: LucideIcon;
     title: string;
@@ -10,13 +16,13 @@ interface Service {
     includes: string[];
     price: string;
     priceNote: string;
+    priceTiers?: PriceTier[];
 }
 
-// Update prices before going live
 const services: Service[] = [
     {
         icon: MessageCircle,
-        title: "Dyslexia Consultations",
+        title: "Dyslexia Consultation",
         description:
             "An in-depth conversation to understand the learner's challenges, history, and goals — and map out the right next steps.",
         includes: [
@@ -25,12 +31,12 @@ const services: Service[] = [
             "Written summary and recommendations",
             "Signposting to relevant resources",
         ],
-        price: "From £X",
-        priceNote: "per consultation",
+        price: "Free",
+        priceNote: "no charge",
     },
     {
         icon: ClipboardList,
-        title: "Dyslexia Assessments",
+        title: "Literacy & Placement Assessment",
         description:
             "A comprehensive, evidence-based assessment that identifies strengths, challenges, and the specific profile of the learner's dyslexia.",
         includes: [
@@ -39,8 +45,8 @@ const services: Service[] = [
             "Diagnosis and profile summary",
             "Recommendations for school and home",
         ],
-        price: "From £X",
-        priceNote: "full assessment",
+        price: "€100",
+        priceNote: "initial assessment",
     },
     {
         icon: GraduationCap,
@@ -53,8 +59,14 @@ const services: Service[] = [
             "Home practice materials",
             "Regular progress updates for parents",
         ],
-        price: "£X",
+        price: "From €45",
         priceNote: "per session",
+        priceTiers: [
+            { label: "1 session", total: "€60" },
+            { label: "2 sessions", total: "€100", perSession: "€50 each" },
+            { label: "3 sessions", total: "€150", perSession: "€50 each" },
+            { label: "4 sessions", total: "€180", perSession: "€45 each" },
+        ],
     },
     {
         icon: FileText,
@@ -67,8 +79,8 @@ const services: Service[] = [
             "Updated learning plan",
             "Suitable for school review meetings",
         ],
-        price: "From £X",
-        priceNote: "per report",
+        price: "Free",
+        priceNote: "included with tuition",
     },
 ];
 
@@ -112,16 +124,39 @@ export default function ServicesGrid() {
                                 ))}
                             </ul>
 
-                            <div className="mt-6 flex items-end justify-between gap-4">
-                                <div>
-                                    <p className="text-2xl font-semibold text-brand-navy">
-                                        {service.price}
-                                    </p>
-                                    <p className="text-xs text-brand-muted">{service.priceNote}</p>
+                            <div className="mt-6 space-y-4">
+                                {service.priceTiers ? (
+                                    <div>
+                                        <p className="text-xs font-semibold uppercase tracking-widest text-brand-muted mb-2">
+                                            Session bundles
+                                        </p>
+                                        <div className="divide-y divide-border rounded-xl border border-border overflow-hidden">
+                                            {service.priceTiers.map((tier) => (
+                                                <div key={tier.label} className="flex items-center justify-between px-3 py-2 bg-background text-sm">
+                                                    <span className="text-brand-muted">{tier.label}</span>
+                                                    <div className="text-right">
+                                                        <span className="font-semibold text-brand-navy">{tier.total}</span>
+                                                        {tier.perSession && (
+                                                            <span className="ml-1.5 text-xs text-brand-muted">({tier.perSession})</span>
+                                                        )}
+                                                    </div>
+                                                </div>
+                                            ))}
+                                        </div>
+                                    </div>
+                                ) : (
+                                    <div>
+                                        <p className={`text-2xl font-semibold ${service.price === "Free" ? "text-emerald-600" : "text-brand-navy"}`}>
+                                            {service.price}
+                                        </p>
+                                        <p className="text-xs text-brand-muted">{service.priceNote}</p>
+                                    </div>
+                                )}
+                                <div className="flex justify-end">
+                                    <Button asChild className="rounded-full px-6">
+                                        <Link href="/contact">Book now</Link>
+                                    </Button>
                                 </div>
-                                <Button asChild className="rounded-full px-6">
-                                    <Link href="/contact">Book now</Link>
-                                </Button>
                             </div>
                         </article>
                     </AnimateIn>
