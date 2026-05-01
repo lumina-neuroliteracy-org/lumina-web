@@ -11,11 +11,34 @@ import type { Resource } from "@/lib/supabase/types";
 import { ResourceFormDialog } from "./ResourceFormDialog";
 import Link from "next/link";
 
-const fileTypeBadgeColors: Record<string, string> = {
-    pdf: "bg-red-100 text-red-700",
-    video: "bg-purple-100 text-purple-700",
-    doc: "bg-blue-100 text-blue-700",
-    other: "bg-gray-100 text-gray-700",
+const BADGE_COLORS: Record<string, string> = {
+    // documents
+    pdf:  "bg-red-100 text-red-700",
+    doc:  "bg-blue-100 text-blue-700",
+    docx: "bg-blue-100 text-blue-700",
+    xls:  "bg-green-100 text-green-700",
+    xlsx: "bg-green-100 text-green-700",
+    ppt:  "bg-orange-100 text-orange-700",
+    pptx: "bg-orange-100 text-orange-700",
+    txt:  "bg-gray-100 text-gray-600",
+    // images
+    jpg:  "bg-yellow-100 text-yellow-700",
+    jpeg: "bg-yellow-100 text-yellow-700",
+    png:  "bg-yellow-100 text-yellow-700",
+    gif:  "bg-yellow-100 text-yellow-700",
+    webp: "bg-yellow-100 text-yellow-700",
+    svg:  "bg-yellow-100 text-yellow-700",
+    // video
+    mp4:  "bg-purple-100 text-purple-700",
+    mov:  "bg-purple-100 text-purple-700",
+    avi:  "bg-purple-100 text-purple-700",
+    webm: "bg-purple-100 text-purple-700",
+    // audio
+    mp3:  "bg-pink-100 text-pink-700",
+    wav:  "bg-pink-100 text-pink-700",
+    // archive
+    zip:  "bg-gray-100 text-gray-700",
+    rar:  "bg-gray-100 text-gray-700",
 };
 
 export function ResourceCard({
@@ -44,7 +67,7 @@ export function ResourceCard({
     }
 
     const badgeClass =
-        fileTypeBadgeColors[resource.file_type] ?? fileTypeBadgeColors.other;
+        BADGE_COLORS[resource.file_type] ?? "bg-gray-100 text-gray-700";
 
     return (
         <>

@@ -16,7 +16,18 @@ import { createClient } from "@/lib/supabase/client";
 import { createResource, updateResource } from "@/lib/actions/resources";
 import type { Resource } from "@/lib/supabase/types";
 
-const FILE_TYPES = ["pdf", "video", "doc", "other"] as const;
+function extFromFilename(name: string): string {
+    const parts = name.split(".");
+    return parts.length > 1 ? parts.pop()!.toLowerCase() : "";
+}
+
+function extFromUrl(url: string): string {
+    try {
+        return extFromFilename(new URL(url).pathname);
+    } catch {
+        return extFromFilename(url);
+    }
+}
 
 export function ResourceFormDialog({
     existing,
@@ -29,28 +40,29 @@ export function ResourceFormDialog({
     const supabase = createClient();
 
     const [title, setTitle] = useState(existing?.title ?? "");
-    const [description, setDescription] = useState(
-        existing?.description ?? ""
-    );
-    const [fileType, setFileType] = useState<string>(
-        existing?.file_type ?? "pdf"
-    );
+    const [description, setDescription] = useState(existing?.description ?? "");
+    const [fileType, setFileType] = useState<string>(existing?.file_type ?? "");
     const [fileUrl, setFileUrl] = useState(existing?.file_url ?? "");
     const [file, setFile] = useState<File | null>(null);
-    const [isPublished, setIsPublished] = useState(
-        existing?.is_published ?? false
-    );
+    const [isPublished, setIsPublished] = useState(existing?.is_published ?? false);
     const [loading, setLoading] = useState(false);
     const [error, setError] = useState<string | null>(null);
 
     async function uploadFile(f: File): Promise<string> {
-        const path = `${Date.now()}-${f.name.replace(/\s+/g, "-")}`;
+        const ext = f.name.includes(".") ? `.${f.name.split(".").pop()}` : "";
+        const base = f.name
+            .slice(0, f.name.length - ext.length)
+            .normalize("NFD")
+            .replace(/[̀-ͯ]/g, "")
+            .replace(/[^a-zA-Z0-9._-]/g, "-")
+            .replace(/-+/g, "-")
+            .replace(/^-|-$/g, "");
+        const path = `${Date.now()}-${base}${ext}`;
         const { error: uploadError } = await supabase.storage
             .from("resources")
             .upload(path, f);
         if (uploadError) throw new Error(uploadError.message);
-        return supabase.storage.from("resources").getPublicUrl(path).data
-            .publicUrl;
+        return supabase.storage.from("resources").getPublicUrl(path).data.publicUrl;
     }
 
     async function handleSubmit(e: React.FormEvent) {
@@ -73,7 +85,7 @@ export function ResourceFormDialog({
                 title,
                 description: description || null,
                 file_url: resolvedUrl,
-                file_type: fileType,
+                file_type: fileType || "other",
                 is_published: isPublished,
             };
 
@@ -129,28 +141,14 @@ export function ResourceFormDialog({
                     </div>
 
                     <div className="space-y-1.5">
-                        <Label htmlFor="res-type">File Type</Label>
-                        <select
-                            id="res-type"
-                            value={fileType}
-                            onChange={(e) => setFileType(e.target.value)}
-                            className="w-full rounded-xl border border-input bg-background px-3 py-2 text-sm focus:outline-none focus:ring-2 focus:ring-ring"
-                        >
-                            {FILE_TYPES.map((t) => (
-                                <option key={t} value={t}>
-                                    {t.toUpperCase()}
-                                </option>
-                            ))}
-                        </select>
-                    </div>
-
-                    <div className="space-y-1.5">
                         <Label>File</Label>
                         <Input
                             type="file"
-                            onChange={(e) =>
-                                setFile(e.target.files?.[0] ?? null)
-                            }
+                            onChange={(e) => {
+                                const f = e.target.files?.[0] ?? null;
+                                setFile(f);
+                                if (f) setFileType(extFromFilename(f.name));
+                            }}
                             className="rounded-xl"
                         />
                         <p className="text-xs text-brand-muted">
@@ -159,8 +157,30 @@ export function ResourceFormDialog({
                         <Input
                             type="url"
                             value={fileUrl}
-                            onChange={(e) => setFileUrl(e.target.value)}
+                            onChange={(e) => {
+                                setFileUrl(e.target.value);
+                                if (e.target.value)
+                                    setFileType(extFromUrl(e.target.value));
+                            }}
                             placeholder="https://..."
+                            className="rounded-xl"
+                        />
+                    </div>
+
+                    <div className="space-y-1.5">
+                        <Label htmlFor="res-type">
+                            File Type
+                            <span className="ml-1 text-xs text-brand-muted font-normal">
+                                (auto-detected, editable)
+                            </span>
+                        </Label>
+                        <Input
+                            id="res-type"
+                            value={fileType}
+                            onChange={(e) =>
+                                setFileType(e.target.value.toLowerCase())
+                            }
+                            placeholder="e.g. pdf, jpeg, mp4"
                             className="rounded-xl"
                         />
                     </div>

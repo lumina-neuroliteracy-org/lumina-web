@@ -20,7 +20,6 @@ export async function getAllResources(): Promise<Resource[]> {
         .from("resources")
         .select("*")
         .order("created_at", { ascending: false });
-
     if (error) throw new Error(error.message);
     return (data ?? []) as Resource[];
 }
