@@ -25,7 +25,52 @@ export async function proxy(request: NextRequest) {
         }
     );
 
-    await supabase.auth.getUser();
+    const {
+        data: { user },
+    } = await supabase.auth.getUser();
+
+    const { pathname } = request.nextUrl;
+
+    const isStudentRoute = pathname.startsWith("/student");
+    const isAdminRoute = pathname.startsWith("/admin");
+    const isAuthRoute = pathname === "/login" || pathname === "/signup";
+
+    // Unauthenticated user trying to access protected routes
+    if ((isStudentRoute || isAdminRoute) && !user) {
+        const url = new URL("/login", request.url);
+        url.searchParams.set("next", pathname);
+        return NextResponse.redirect(url);
+    }
+
+    // Admin routes — verify role in profiles table
+    if (isAdminRoute && user) {
+        const { data: profile } = await supabase
+            .from("profiles")
+            .select("role")
+            .eq("id", user.id)
+            .single();
+        const isAdmin =
+            profile?.role === "admin" || profile?.role === "super_admin";
+        if (!isAdmin) {
+            return NextResponse.redirect(
+                new URL("/student/dashboard", request.url)
+            );
+        }
+    }
+
+    // Authenticated user landing on auth pages — redirect to their dashboard
+    if (isAuthRoute && user) {
+        const { data: profile } = await supabase
+            .from("profiles")
+            .select("role")
+            .eq("id", user.id)
+            .single();
+        const dest =
+            profile?.role === "admin" || profile?.role === "super_admin"
+                ? "/admin/dashboard"
+                : "/student/dashboard";
+        return NextResponse.redirect(new URL(dest, request.url));
+    }
 
     return supabaseResponse;
 }

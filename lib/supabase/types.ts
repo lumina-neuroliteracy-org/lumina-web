@@ -1,0 +1,42 @@
+export type Role = "student" | "admin" | "super_admin";
+
+export interface Profile {
+    id: string;
+    full_name: string | null;
+    avatar_url: string | null;
+    role: Role;
+    created_at: string;
+    updated_at: string;
+}
+
+export interface LiveClass {
+    id: string;
+    title: string;
+    description: string | null;
+    join_url: string;
+    scheduled_at: string;
+    created_by: string;
+    is_active: boolean;
+    created_at: string;
+    updated_at: string;
+}
+
+export interface Resource {
+    id: string;
+    title: string;
+    description: string | null;
+    file_url: string;
+    file_type: string;
+    created_by: string;
+    is_published: boolean;
+    created_at: string;
+    updated_at: string;
+}
+
+export interface UserListEntry {
+    id: string;
+    full_name: string | null;
+    avatar_url: string | null;
+    role: Role;
+    created_at: string;
+}
