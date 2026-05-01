@@ -8,7 +8,7 @@ export default function ServicesHero() {
         <section className="relative h-[60vh] min-h-105 w-full overflow-hidden">
             <Image
                 src="/hero-one.jpg"
-                alt="Luminar specialist session in progress"
+                alt="Lumina specialist session in progress"
                 fill
                 className="object-cover object-center"
                 priority

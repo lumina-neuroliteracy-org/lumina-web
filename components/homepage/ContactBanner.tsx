@@ -24,7 +24,7 @@ export default function ContactBanner() {
                     <AnimateIn delay={0.3}>
                         <div className="mt-6 flex flex-col gap-3 sm:flex-row lg:mt-0">
                             <Button asChild size="lg" className="rounded-full px-6">
-                                <Link href="mailto:hello@luminar.dev">hello@luminar.dev</Link>
+                                <Link href="mailto:hello@lumina.dev">hello@lumina.dev</Link>
                             </Button>
                             <Button asChild variant="outline" size="lg" className="rounded-full px-6">
                                 <Link href="/signup">Create an account</Link>

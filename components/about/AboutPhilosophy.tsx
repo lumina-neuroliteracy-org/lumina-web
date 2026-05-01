@@ -30,7 +30,7 @@ export default function AboutPhilosophy() {
                         and a plan built for that specific person.
                     </p>
                     <p>
-                        Luminar is not a quick fix. It's a partnership — and we take that
+                        Lumina is not a quick fix. It's a partnership — and we take that
                         responsibility seriously for every family and school that trusts us
                         with their learner.
                     </p>

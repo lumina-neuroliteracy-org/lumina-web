@@ -39,7 +39,7 @@ export default function Footer() {
                         {/* Brand */}
                         <div className="flex flex-col  gap-4">
                             <Link href="/">
-                                <Image src={logo} alt="Luminar logo" width={80} height={40} />
+                                <Image src={logo} alt="Lumina logo" width={80} height={40} />
                             </Link>
                             <div className="text-sm font-semibold text-brand-gold lg:block">
                                 <h3>LUMINA</h3>
@@ -111,7 +111,7 @@ export default function Footer() {
                 <AnimateIn delay={0.15}>
                     <div className="mt-12 flex flex-col items-start justify-between gap-4 border-t border-brand-on-navy/10 pt-8 sm:flex-row sm:items-center text-white pb-4">
                         <p className="text-sm text-brand-on-navy/50">
-                            &copy; {new Date().getFullYear()} Luminar. All rights reserved.
+                            &copy; {new Date().getFullYear()} Lumina. All rights reserved.
                         </p>
                         <p className="text-sm text-brand-on-navy/50">
                             Built for learners who deserve better.

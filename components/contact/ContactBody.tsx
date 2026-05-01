@@ -26,8 +26,8 @@ const contactDetails = [
     {
         icon: Mail,
         label: "Email",
-        lines: ["hello@luminar.ng"],
-        hrefs: ["mailto:hello@luminar.ng"],
+        lines: ["hello@lumina.ng"],
+        hrefs: ["mailto:hello@lumina.ng"],
     },
     {
         icon: MapPin,
@@ -221,7 +221,7 @@ export default function ContactBody() {
                                 <iframe
                                     className="absolute inset-0 h-full w-full"
                                     src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d253682.45843135456!2d3.1438710523208486!3d6.548055448792087!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x103b8b2ae68280c1%3A0xdc9e87a367c3d9cb!2sLagos%2C%20Nigeria!5e0!3m2!1sen!2sng!4v1714000000000"
-                                    title="Luminar location map"
+                                    title="Lumina location map"
                                     loading="lazy"
                                     referrerPolicy="no-referrer-when-downgrade"
                                     allowFullScreen

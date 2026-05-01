@@ -13,7 +13,7 @@ export default function VideoSection() {
                     See what working together actually looks like.
                 </h2>
                 <p className="mt-4 max-w-xl text-base leading-7 text-brand-muted">
-                    A short overview of how Luminar supports learners, families, and schools from first conversation to lasting progress.
+                    A short overview of how Lumina supports learners, families, and schools from first conversation to lasting progress.
                 </p>
             </AnimateIn>
             <AnimateIn delay={0.15}>
@@ -22,7 +22,7 @@ export default function VideoSection() {
                         <iframe
                             className="absolute inset-0 h-full w-full"
                             src="https://www.youtube.com/embed/dQw4w9WgXcQ"
-                            title="How Luminar helps learners with dyslexia"
+                            title="How Lumina helps learners with dyslexia"
                             allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
                             allowFullScreen
                         />

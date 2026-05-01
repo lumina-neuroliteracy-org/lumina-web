@@ -87,7 +87,7 @@ export default function SignupPage() {
                     <>
                         <div className="space-y-1 text-center">
                             <h1 className="text-2xl font-semibold text-brand-navy">Create an account</h1>
-                            <p className="text-sm text-brand-muted">Get started with Luminar</p>
+                            <p className="text-sm text-brand-muted">Get started with Lumina</p>
                         </div>
 
                         {/* Google */}

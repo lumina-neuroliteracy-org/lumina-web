@@ -18,7 +18,7 @@ const lexend = Lexend({
 });
 
 export const metadata: Metadata = {
-  title: "Luminar",
+  title: "Lumina",
   description: "Accessibility-first learning support for dyslexia journeys.",
 };
 

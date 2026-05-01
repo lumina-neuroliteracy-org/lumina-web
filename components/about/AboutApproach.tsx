@@ -35,7 +35,7 @@ export default function AboutApproach() {
                     </h2>
                     <p className="mt-4 max-w-xl text-base leading-7 text-brand-on-navy/70">
                         Three principles guide every session, every plan, and every
-                        conversation at Luminar.
+                        conversation at Lumina.
                     </p>
                 </AnimateIn>
                 <div className="mt-10 grid gap-5 sm:grid-cols-3">

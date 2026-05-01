@@ -13,7 +13,7 @@ export default function AboutCTA() {
                             Ready to start?
                         </p>
                         <h2 className="mt-3 text-3xl font-semibold tracking-tight text-brand-navy">
-                            See Luminar in action, then book your first session.
+                            See Lumina in action, then book your first session.
                         </h2>
                         <p className="mt-4 text-base leading-7 text-brand-muted">
                             Watch a short intro to understand how we work, or jump straight

@@ -15,7 +15,7 @@ export default function AboutSpecialist() {
                 <AnimateIn direction="left">
                     <Image
                         src="/tutor.png"
-                        alt="Luminar specialist"
+                        alt="Lumina specialist"
                         width={480}
                         height={560}
                         className="w-full rounded-[2rem] object-cover shadow-[0_20px_60px_-20px_rgba(15,23,42,0.2)]"
@@ -28,7 +28,7 @@ export default function AboutSpecialist() {
                     </p>
                     <h2 className="mt-3 text-3xl font-semibold tracking-tight text-brand-navy lg:text-4xl">
                         {/* Replace with specialist name */}
-                        Jane Luminar
+                        Jane Lumina
                     </h2>
                     <div className="mt-4 flex flex-wrap gap-2">
                         {credentials.map((c) => (

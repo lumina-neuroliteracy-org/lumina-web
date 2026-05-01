@@ -4,7 +4,7 @@ import { Button } from "@/components/ui/button";
 import type { Metadata } from "next";
 
 export const metadata: Metadata = {
-    title: "Coming Soon — Luminar",
+    title: "Coming Soon — Lumina",
     description: "Something new is on its way. Stay tuned.",
 };
 
@@ -22,7 +22,7 @@ export default function ComingSoonPage() {
                 Something&apos;s on its way
             </h1>
             <p className="mt-4 max-w-md text-base leading-7 text-brand-muted">
-                We&apos;re working on this part of Luminar. Check back soon —
+                We&apos;re working on this part of Lumina. Check back soon —
                 we&apos;ll have it ready for you before long.
             </p>
 

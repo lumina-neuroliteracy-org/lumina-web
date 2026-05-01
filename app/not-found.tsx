@@ -5,7 +5,7 @@ import { AnimateIn } from "@/components/AnimateIn";
 import type { Metadata } from "next";
 
 export const metadata: Metadata = {
-    title: "Page Not Found — Luminar",
+    title: "Page Not Found — Lumina",
     description: "The page you are looking for does not exist.",
 };
 
