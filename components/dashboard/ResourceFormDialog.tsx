@@ -95,7 +95,7 @@ export function ResourceFormDialog({
 
     return (
         <Sheet open onOpenChange={(open) => !open && onClose()}>
-            <SheetContent className="w-full sm:max-w-md overflow-y-auto">
+            <SheetContent className="w-full sm:max-w-md overflow-y-auto px-4">
                 <SheetHeader>
                     <SheetTitle>
                         {existing ? "Edit Resource" : "Add Resource"}

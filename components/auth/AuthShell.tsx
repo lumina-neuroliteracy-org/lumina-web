@@ -4,7 +4,7 @@ import logo from "@/public/lumina-logo.png";
 export default function AuthShell({ children }: { children: React.ReactNode }) {
     return (
         <div className="mx-auto max-w-5xl px-5 py-10 sm:px-8">
-            <div className="flex min-h-[560px] overflow-hidden rounded-[2rem] shadow-xl">
+            <div className="flex min-h-140 overflow-hidden rounded-[2rem] shadow-xl">
                 {/* Left panel — navy brand panel */}
                 <div className="hidden w-[45%] flex-col items-center justify-center gap-6 bg-brand-navy p-10 lg:flex">
                     <Image

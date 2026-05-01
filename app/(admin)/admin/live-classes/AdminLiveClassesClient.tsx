@@ -16,8 +16,8 @@ export function AdminLiveClassesClient({
 
     return (
         <>
-            <div className="space-y-6">
-                <div className="flex items-center justify-between">
+            <div className="space-y-6 mt-2 lg:mt-0">
+                <div className="flex flex-col lg:flex-row lg:*:items-center justify-between">
                     <div>
                         <h1 className="text-2xl font-semibold text-brand-navy">
                             Live Classes
@@ -28,7 +28,7 @@ export function AdminLiveClassesClient({
                     </div>
                     <Button
                         onClick={() => setCreating(true)}
-                        className="rounded-full bg-brand-navy text-brand-on-navy hover:bg-brand-navy/90"
+                        className="rounded-full bg-brand-navy text-brand-on-navy hover:bg-brand-navy/90 mt-3 lg:my-0 max-w-xs"
                     >
                         <Plus className="size-4 mr-1" />
                         Create Class

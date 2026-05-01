@@ -13,7 +13,7 @@ export default async function StudentLayout({
         <DyslexiaProvider>
             <div className="flex min-h-screen bg-brand-surface">
                 <StudentSidebar profile={profile} />
-                <main className="flex-1 overflow-auto p-6 lg:p-8">
+                <main className="flex-1 overflow-auto p-6 pt-14 lg:p-8 lg:pt-8">
                     {children}
                 </main>
             </div>

@@ -7,6 +7,7 @@ import { Button } from "@/components/ui/button";
 import { deleteLiveClass } from "@/lib/actions/live-classes";
 import type { LiveClass } from "@/lib/supabase/types";
 import { LiveClassFormDialog } from "./LiveClassFormDialog";
+import Link from "next/link";
 
 function formatDate(iso: string) {
     return new Date(iso).toLocaleString("en-GB", {
@@ -59,24 +60,24 @@ export function LiveClassCard({
                     {formatDate(liveClass.scheduled_at)}
                 </div>
 
-                <div className="flex items-center gap-2 pt-1">
-                    <a
+                <div className="flex flex-col sm:flex-row flex-wrap items-stretch sm:items-center gap-2 pt-1 min-w-0">
+                    <Link
                         href={liveClass.join_url}
                         target="_blank"
                         rel="noopener noreferrer"
-                        className="inline-flex items-center gap-1.5 rounded-full bg-brand-navy px-4 py-2 text-xs font-medium text-brand-on-navy transition-colors hover:bg-brand-navy/90"
+                        className="inline-flex items-center justify-center w-full sm:w-auto gap-1.5 rounded-full bg-brand-navy px-4 py-2 text-xs font-medium text-brand-on-navy transition-colors hover:bg-brand-navy/90 min-w-0 max-w-full"
                     >
                         <ExternalLink className="size-3" />
                         Join Class
-                    </a>
+                    </Link>
 
                     {isAdmin && (
-                        <>
+                        <div className="flex flex-col sm:flex-row flex-wrap items-stretch sm:items-center gap-2 w-full sm:w-auto min-w-0">
                             <Button
                                 variant="outline"
                                 size="sm"
                                 onClick={() => setEditing(true)}
-                                className="rounded-full"
+                                className="rounded-full w-full sm:w-auto justify-center min-w-0 max-w-full"
                             >
                                 <Pencil className="size-3.5 mr-1" />
                                 Edit
@@ -86,12 +87,12 @@ export function LiveClassCard({
                                 size="sm"
                                 disabled={deleting}
                                 onClick={handleDelete}
-                                className="rounded-full text-destructive hover:text-destructive"
+                                className="rounded-full w-full sm:w-auto justify-center text-destructive hover:text-destructive min-w-0 max-w-full"
                             >
                                 <Trash2 className="size-3.5 mr-1" />
                                 {deleting ? "Deleting…" : "Delete"}
                             </Button>
-                        </>
+                        </div>
                     )}
                 </div>
             </div>

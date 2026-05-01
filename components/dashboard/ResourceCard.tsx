@@ -7,6 +7,7 @@ import { Button } from "@/components/ui/button";
 import { deleteResource } from "@/lib/actions/resources";
 import type { Resource } from "@/lib/supabase/types";
 import { ResourceFormDialog } from "./ResourceFormDialog";
+import Link from "next/link";
 
 const fileTypeBadgeColors: Record<string, string> = {
     pdf: "bg-red-100 text-red-700",
@@ -68,16 +69,16 @@ export function ResourceCard({
                     </p>
                 )}
 
-                <div className="flex items-center gap-2 pt-1">
-                    <a
+                <div className="flex flex-col sm:flex-row flex-wrap items-stretch sm:items-center gap-2 pt-1 min-w-0">
+                    <Link
                         href={resource.file_url}
                         target="_blank"
                         rel="noopener noreferrer"
-                        className="inline-flex items-center gap-1.5 rounded-full bg-brand-navy px-4 py-2 text-xs font-medium text-brand-on-navy transition-colors hover:bg-brand-navy/90"
+                        className="inline-flex items-center justify-center w-full sm:w-auto gap-1.5 rounded-full bg-brand-navy px-4 py-2 text-xs font-medium text-brand-on-navy transition-colors hover:bg-brand-navy/90 min-w-0 max-w-full"
                     >
                         <Download className="size-3" />
                         Download
-                    </a>
+                    </Link>
 
                     {isAdmin && (
                         <>
@@ -85,7 +86,7 @@ export function ResourceCard({
                                 variant="outline"
                                 size="sm"
                                 onClick={() => setEditing(true)}
-                                className="rounded-full"
+                                className="rounded-full w-full sm:w-auto justify-center min-w-0 max-w-full"
                             >
                                 <Pencil className="size-3.5 mr-1" />
                                 Edit
@@ -95,7 +96,7 @@ export function ResourceCard({
                                 size="sm"
                                 disabled={deleting}
                                 onClick={handleDelete}
-                                className="rounded-full text-destructive hover:text-destructive"
+                                className="rounded-full w-full sm:w-auto justify-center text-destructive hover:text-destructive min-w-0 max-w-full"
                             >
                                 <Trash2 className="size-3.5 mr-1" />
                                 {deleting ? "Deleting…" : "Delete"}

@@ -64,8 +64,9 @@ export function AdminUsersClient({
                     </p>
                 </div>
             ) : (
-                <div className="overflow-hidden rounded-xl border border-border bg-brand-card">
-                    <table className="w-full text-sm">
+                <div className="rounded-xl border border-border bg-brand-card">
+                    <div className="w-full overflow-x-auto">
+                        <table className="min-w-160 w-full text-sm">
                         <thead>
                             <tr className="border-b border-border bg-brand-surface">
                                 <th className="px-4 py-3 text-left font-medium text-brand-muted">
@@ -140,7 +141,8 @@ export function AdminUsersClient({
                                 </tr>
                             ))}
                         </tbody>
-                    </table>
+                        </table>
+                    </div>
                 </div>
             )}
         </div>
