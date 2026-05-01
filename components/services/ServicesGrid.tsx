@@ -17,6 +17,14 @@ interface Service {
     price: string;
     priceNote: string;
     priceTiers?: PriceTier[];
+    bookingHref?: string;
+    whatsappMessage?: string;
+}
+
+const WHATSAPP_NUMBER = "353874523726";
+
+function whatsappHref(message: string) {
+    return `https://wa.me/${WHATSAPP_NUMBER}?text=${encodeURIComponent(message)}`;
 }
 
 const services: Service[] = [
@@ -33,6 +41,7 @@ const services: Service[] = [
         ],
         price: "Free",
         priceNote: "no charge",
+        bookingHref: "https://tidycal.com/104qe7v/free-15-minute-screening-and-needs-assessment",
     },
     {
         icon: ClipboardList,
@@ -47,6 +56,7 @@ const services: Service[] = [
         ],
         price: "€100",
         priceNote: "initial assessment",
+        whatsappMessage: "Hi, I'd like to book a Literacy & Placement Assessment with Lumina. Could you let me know the next available slot?",
     },
     {
         icon: GraduationCap,
@@ -61,6 +71,7 @@ const services: Service[] = [
         ],
         price: "From €45",
         priceNote: "per session",
+        whatsappMessage: "Hi, I'm interested in booking Specialist Dyslexia Tuition sessions with Lumina. Could you tell me more about availability?",
         priceTiers: [
             { label: "1 session", total: "€60" },
             { label: "2 sessions", total: "€100", perSession: "€50 each" },
@@ -81,6 +92,7 @@ const services: Service[] = [
         ],
         price: "Free",
         priceNote: "included with tuition",
+        whatsappMessage: "Hi, I'd like to enquire about Literacy Progress Reports at Lumina. Could you give me more details?",
     },
 ];
 
@@ -154,7 +166,18 @@ export default function ServicesGrid() {
                                 )}
                                 <div className="flex justify-end">
                                     <Button asChild className="rounded-full px-6">
-                                        <Link href="/contact">Book now</Link>
+                                        <Link
+                                            href={
+                                                service.bookingHref ??
+                                                (service.whatsappMessage
+                                                    ? whatsappHref(service.whatsappMessage)
+                                                    : "/contact")
+                                            }
+                                            target="_blank"
+                                            rel="noopener noreferrer"
+                                        >
+                                            Book now
+                                        </Link>
                                     </Button>
                                 </div>
                             </div>
