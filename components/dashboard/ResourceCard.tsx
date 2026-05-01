@@ -3,7 +3,9 @@
 import { useState } from "react";
 import { useRouter } from "next/navigation";
 import { Download, Pencil, Trash2 } from "lucide-react";
+import { toast } from "sonner";
 import { Button } from "@/components/ui/button";
+import { ConfirmDialog } from "@/components/ui/confirm-dialog";
 import { deleteResource } from "@/lib/actions/resources";
 import type { Resource } from "@/lib/supabase/types";
 import { ResourceFormDialog } from "./ResourceFormDialog";
@@ -25,14 +27,20 @@ export function ResourceCard({
 }) {
     const router = useRouter();
     const [editing, setEditing] = useState(false);
+    const [confirmOpen, setConfirmOpen] = useState(false);
     const [deleting, setDeleting] = useState(false);
 
     async function handleDelete() {
-        if (!confirm(`Delete "${resource.title}"?`)) return;
         setDeleting(true);
-        await deleteResource(resource.id);
+        const { error } = await deleteResource(resource.id);
         setDeleting(false);
-        router.refresh();
+        setConfirmOpen(false);
+        if (error) {
+            toast.error(error);
+        } else {
+            toast.success("Resource deleted");
+            router.refresh();
+        }
     }
 
     const badgeClass =
@@ -55,9 +63,7 @@ export function ResourceCard({
                             <span
                                 className={`rounded-full px-2 py-0.5 text-xs font-medium ${resource.is_published ? "bg-green-100 text-green-700" : "bg-brand-muted/10 text-brand-muted"}`}
                             >
-                                {resource.is_published
-                                    ? "Published"
-                                    : "Unpublished"}
+                                {resource.is_published ? "Published" : "Unpublished"}
                             </span>
                         )}
                     </div>
@@ -94,12 +100,11 @@ export function ResourceCard({
                             <Button
                                 variant="outline"
                                 size="sm"
-                                disabled={deleting}
-                                onClick={handleDelete}
+                                onClick={() => setConfirmOpen(true)}
                                 className="rounded-full w-full sm:w-auto justify-center text-destructive hover:text-destructive min-w-0 max-w-full"
                             >
                                 <Trash2 className="size-3.5 mr-1" />
-                                {deleting ? "Deleting…" : "Delete"}
+                                Delete
                             </Button>
                         </>
                     )}
@@ -112,6 +117,15 @@ export function ResourceCard({
                     onClose={() => setEditing(false)}
                 />
             )}
+
+            <ConfirmDialog
+                open={confirmOpen}
+                title="Delete resource?"
+                description={`"${resource.title}" will be permanently removed.`}
+                loading={deleting}
+                onConfirm={handleDelete}
+                onCancel={() => setConfirmOpen(false)}
+            />
         </>
     );
 }

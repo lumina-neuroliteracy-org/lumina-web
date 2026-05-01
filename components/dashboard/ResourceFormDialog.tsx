@@ -11,6 +11,7 @@ import {
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { Label } from "@/components/ui/label";
+import { toast } from "sonner";
 import { createClient } from "@/lib/supabase/client";
 import { createResource, updateResource } from "@/lib/actions/resources";
 import type { Resource } from "@/lib/supabase/types";
@@ -82,7 +83,9 @@ export function ResourceFormDialog({
 
             if (result.error) {
                 setError(result.error);
+                toast.error(result.error);
             } else {
+                toast.success(existing ? "Resource updated" : "Resource added");
                 router.refresh();
                 onClose();
             }

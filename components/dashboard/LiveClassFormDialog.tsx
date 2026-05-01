@@ -2,6 +2,7 @@
 
 import { useState } from "react";
 import { useRouter } from "next/navigation";
+import { toast } from "sonner";
 import {
     Sheet,
     SheetContent,
@@ -59,7 +60,9 @@ export function LiveClassFormDialog({
 
         if (result.error) {
             setError(result.error);
+            toast.error(result.error);
         } else {
+            toast.success(existing ? "Live class updated" : "Live class created");
             router.refresh();
             onClose();
         }

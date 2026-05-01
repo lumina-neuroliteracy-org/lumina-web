@@ -3,7 +3,9 @@
 import { useState } from "react";
 import { useRouter } from "next/navigation";
 import { Calendar, ExternalLink, Pencil, Trash2 } from "lucide-react";
+import { toast } from "sonner";
 import { Button } from "@/components/ui/button";
+import { ConfirmDialog } from "@/components/ui/confirm-dialog";
 import { deleteLiveClass } from "@/lib/actions/live-classes";
 import type { LiveClass } from "@/lib/supabase/types";
 import { LiveClassFormDialog } from "./LiveClassFormDialog";
@@ -25,14 +27,20 @@ export function LiveClassCard({
 }) {
     const router = useRouter();
     const [editing, setEditing] = useState(false);
+    const [confirmOpen, setConfirmOpen] = useState(false);
     const [deleting, setDeleting] = useState(false);
 
     async function handleDelete() {
-        if (!confirm(`Delete "${liveClass.title}"?`)) return;
         setDeleting(true);
-        await deleteLiveClass(liveClass.id);
+        const { error } = await deleteLiveClass(liveClass.id);
         setDeleting(false);
-        router.refresh();
+        setConfirmOpen(false);
+        if (error) {
+            toast.error(error);
+        } else {
+            toast.success("Live class deleted");
+            router.refresh();
+        }
     }
 
     return (
@@ -85,12 +93,11 @@ export function LiveClassCard({
                             <Button
                                 variant="outline"
                                 size="sm"
-                                disabled={deleting}
-                                onClick={handleDelete}
+                                onClick={() => setConfirmOpen(true)}
                                 className="rounded-full w-full sm:w-auto justify-center text-destructive hover:text-destructive min-w-0 max-w-full"
                             >
                                 <Trash2 className="size-3.5 mr-1" />
-                                {deleting ? "Deleting…" : "Delete"}
+                                Delete
                             </Button>
                         </div>
                     )}
@@ -103,6 +110,15 @@ export function LiveClassCard({
                     onClose={() => setEditing(false)}
                 />
             )}
+
+            <ConfirmDialog
+                open={confirmOpen}
+                title="Delete live class?"
+                description={`"${liveClass.title}" will be permanently removed.`}
+                loading={deleting}
+                onConfirm={handleDelete}
+                onCancel={() => setConfirmOpen(false)}
+            />
         </>
     );
 }

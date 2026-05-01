@@ -2,6 +2,7 @@
 
 import { useState } from "react";
 import { useRouter } from "next/navigation";
+import { toast } from "sonner";
 import { Users } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { setUserRole } from "@/lib/actions/users";
@@ -34,9 +35,14 @@ export function AdminUsersClient({
         const newRole =
             currentRole === "student" ? "admin" : "student";
         setPending(id);
-        await setUserRole(id, newRole);
+        const { error } = await setUserRole(id, newRole);
         setPending(null);
-        router.refresh();
+        if (error) {
+            toast.error(error);
+        } else {
+            toast.success(`Role updated to ${newRole}`);
+            router.refresh();
+        }
     }
 
     return (

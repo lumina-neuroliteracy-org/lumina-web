@@ -1,6 +1,7 @@
 "use client";
 
 import { useState } from "react";
+import { toast } from "sonner";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { Label } from "@/components/ui/label";
@@ -10,23 +11,18 @@ import type { Profile } from "@/lib/supabase/types";
 export function StudentProfileForm({ profile }: { profile: Profile }) {
     const [fullName, setFullName] = useState(profile.full_name ?? "");
     const [loading, setLoading] = useState(false);
-    const [message, setMessage] = useState<{
-        text: string;
-        type: "success" | "error";
-    } | null>(null);
 
     async function handleSubmit(e: React.FormEvent) {
         e.preventDefault();
-        setMessage(null);
         setLoading(true);
         const { error } = await updateProfile(profile.id, {
             full_name: fullName,
         });
         setLoading(false);
         if (error) {
-            setMessage({ text: error, type: "error" });
+            toast.error(error);
         } else {
-            setMessage({ text: "Profile updated.", type: "success" });
+            toast.success("Profile updated");
         }
     }
 
@@ -51,14 +47,6 @@ export function StudentProfileForm({ profile }: { profile: Profile }) {
                     {profile.role}
                 </div>
             </div>
-
-            {message && (
-                <p
-                    className={`text-sm ${message.type === "success" ? "text-green-600" : "text-destructive"}`}
-                >
-                    {message.text}
-                </p>
-            )}
 
             <Button
                 type="submit"
