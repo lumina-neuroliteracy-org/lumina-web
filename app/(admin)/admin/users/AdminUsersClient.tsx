@@ -4,7 +4,7 @@ import { useState } from "react";
 import { useRouter } from "next/navigation";
 import { Users } from "lucide-react";
 import { Button } from "@/components/ui/button";
-import { setUserRole } from "@/lib/dal/users";
+import { setUserRole } from "@/lib/actions/users";
 import type { Role, UserListEntry } from "@/lib/supabase/types";
 
 function formatDate(iso: string) {

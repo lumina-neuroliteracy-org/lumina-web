@@ -4,7 +4,7 @@ import { useState } from "react";
 import { useRouter } from "next/navigation";
 import { Calendar, ExternalLink, Pencil, Trash2 } from "lucide-react";
 import { Button } from "@/components/ui/button";
-import { deleteLiveClass } from "@/lib/dal/live-classes";
+import { deleteLiveClass } from "@/lib/actions/live-classes";
 import type { LiveClass } from "@/lib/supabase/types";
 import { LiveClassFormDialog } from "./LiveClassFormDialog";
 

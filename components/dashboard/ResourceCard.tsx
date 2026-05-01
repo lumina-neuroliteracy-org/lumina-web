@@ -4,7 +4,7 @@ import { useState } from "react";
 import { useRouter } from "next/navigation";
 import { Download, Pencil, Trash2 } from "lucide-react";
 import { Button } from "@/components/ui/button";
-import { deleteResource } from "@/lib/dal/resources";
+import { deleteResource } from "@/lib/actions/resources";
 import type { Resource } from "@/lib/supabase/types";
 import { ResourceFormDialog } from "./ResourceFormDialog";
 

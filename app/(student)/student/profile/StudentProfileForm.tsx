@@ -4,7 +4,7 @@ import { useState } from "react";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { Label } from "@/components/ui/label";
-import { updateProfile } from "@/lib/dal/profile";
+import { updateProfile } from "@/lib/actions/profile";
 import type { Profile } from "@/lib/supabase/types";
 
 export function StudentProfileForm({ profile }: { profile: Profile }) {
@@ -46,7 +46,7 @@ export function StudentProfileForm({ profile }: { profile: Profile }) {
             </div>
 
             <div className="space-y-1.5">
-                <Label>Role</Label>
+                <Label>Role: </Label>
                 <div className="inline-flex items-center rounded-full bg-brand-gold-soft px-3 py-1 text-sm font-medium text-brand-on-gold capitalize">
                     {profile.role}
                 </div>

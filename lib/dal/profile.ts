@@ -38,15 +38,3 @@ export async function requireSuperAdmin(): Promise<Profile> {
     if (profile.role !== "super_admin") redirect("/admin/dashboard");
     return profile;
 }
-
-export async function updateProfile(
-    id: string,
-    updates: Partial<Pick<Profile, "full_name" | "avatar_url">>
-): Promise<{ error: string | null }> {
-    const supabase = await createClient();
-    const { error } = await supabase
-        .from("profiles")
-        .update(updates)
-        .eq("id", id);
-    return { error: error?.message ?? null };
-}

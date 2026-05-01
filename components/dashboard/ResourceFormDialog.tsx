@@ -12,7 +12,7 @@ import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { Label } from "@/components/ui/label";
 import { createClient } from "@/lib/supabase/client";
-import { createResource, updateResource } from "@/lib/dal/resources";
+import { createResource, updateResource } from "@/lib/actions/resources";
 import type { Resource } from "@/lib/supabase/types";
 
 const FILE_TYPES = ["pdf", "video", "doc", "other"] as const;
