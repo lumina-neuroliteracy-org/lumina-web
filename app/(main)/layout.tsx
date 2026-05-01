@@ -3,6 +3,7 @@ import { Navbar } from "@/components/navigation/Navbar";
 import { MobileNavSidebar } from "@/components/navigation/MobileNavSideBar";
 import Footer from "@/components/Footer";
 import { DyslexiaProvider } from "@/components/DyslexiaProvider";
+import WhatsAppButton from "@/components/WhatsAppButton";
 
 export default function MainLayout({ children }: { children: React.ReactNode }) {
     return (
@@ -14,6 +15,7 @@ export default function MainLayout({ children }: { children: React.ReactNode }) 
                     {children}
                 </main>
                 <Footer />
+                <WhatsAppButton />
             </SidebarProvider>
         </DyslexiaProvider>
     );
