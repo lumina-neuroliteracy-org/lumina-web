@@ -95,7 +95,6 @@ export async function submitContactForm(
     data: ContactPayload
 ): Promise<{ error: string | null }> {
     const { error } = await resend.emails.send({
-        // TODO: replace with a verified sending domain once lumina-literacy.ie is added in Resend
         from: "Lumina Contact Form <no-reply@lumina-literacy.ie>",
         to: "info@lumina-literacy.ie",
         replyTo: data.email,
