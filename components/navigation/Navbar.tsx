@@ -41,7 +41,7 @@ export function Navbar() {
                     </Link>
                     <div className="hidden text-sm font-semibold text-brand-gold lg:block">
                         <h3>LUMINA</h3>
-                        <p>THE NEURO-LITERACY STUDIO</p>
+                        <p> NEURO-LITERACY STUDIO</p>
                     </div>
                 </div>
 

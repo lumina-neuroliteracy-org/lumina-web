@@ -13,14 +13,13 @@ const links = {
         { label: "Contact", href: "/contact" },
     ],
     Legal: [
-        { label: "Privacy policy", href: "/coming-soon" },
+        { label: "Privacy policy", href: "/privacy-policy" },
         { label: "Terms of use", href: "/coming-soon" },
     ],
 };
 
 const phones = [
-    { label: "+234 704 565 4324", href: "tel:+2347045654324" },
-    { label: "+234 704 365 4325", href: "tel:+2347043654325" },
+    { label: "087 4523 726", href: "tel:087 4523 726" }
 ];
 
 const socials = [
@@ -43,7 +42,7 @@ export default function Footer() {
                             </Link>
                             <div className="text-sm font-semibold text-brand-gold lg:block">
                                 <h3>LUMINA</h3>
-                                <p>THE NEURO-LITERACY STUDIO</p>
+                                <p>NEURO-LITERACY STUDIO</p>
                             </div>
                             <p className="max-w-xs text-sm leading-7 text-brand-on-navy/70">
                                 Confidence-first literacy support for families, schools, and
