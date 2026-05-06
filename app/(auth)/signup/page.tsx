@@ -25,6 +25,10 @@ export default function SignupPage() {
     const supabase = createClient();
 
     async function handleGoogleSignUp() {
+        // if (!agreed) {
+        //     setError("You must agree to the Terms of Service and Privacy Policy to continue.");
+        //     return;
+        // }
         await supabase.auth.signInWithOAuth({
             provider: "google",
             options: { redirectTo: `${window.location.origin}/auth/callback` },
