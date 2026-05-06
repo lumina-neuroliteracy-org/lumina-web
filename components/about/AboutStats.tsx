@@ -2,7 +2,7 @@ import { AnimateIn } from "@/components/AnimateIn";
 
 const stats = [
     { value: "50+", label: "Learners supported" },
-    { value: "5 yrs", label: "Experience" },
+    { value: "7 yrs", label: "Experience" },
     { value: "3", label: "Service types" },
     { value: "100%", label: "Tailored to each learner" },
 ];

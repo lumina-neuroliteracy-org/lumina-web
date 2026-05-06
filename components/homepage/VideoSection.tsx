@@ -7,7 +7,7 @@ export default function VideoSection() {
         <section className="mx-auto w-full max-w-6xl px-5 py-10 sm:px-8 lg:py-16">
             <AnimateIn>
                 <p className="text-sm lg:text-lg font-semibold tracking-[0.18em] uppercase text-brand-gold-strong">
-                    How I Help
+                    How We Help
                 </p>
                 <h2 className="mt-3 max-w-2xl text-3xl lg:text-4xl font-semibold tracking-tight text-brand-navy">
                     See what working together actually looks like.

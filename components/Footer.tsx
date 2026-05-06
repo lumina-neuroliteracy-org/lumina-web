@@ -14,7 +14,7 @@ const links = {
     ],
     Legal: [
         { label: "Privacy policy", href: "/privacy-policy" },
-        { label: "Terms of use", href: "/coming-soon" },
+        { label: "Terms of use", href: "/terms-of-use" },
     ],
 };
 
@@ -23,10 +23,10 @@ const phones = [
 ];
 
 const socials = [
-    { label: "Facebook",  href: "https://facebook.com",  Icon: FaFacebook  },
-    { label: "Instagram", href: "https://instagram.com", Icon: FaInstagram },
-    { label: "YouTube",   href: "https://youtube.com",   Icon: FaYoutube   },
-    { label: "TikTok",    href: "https://tiktok.com",    Icon: FaTiktok    },
+    { label: "Facebook", href: "https://web.facebook.com/people/Lumina-Neuro-Literacy-Studio/61587695849659/", Icon: FaFacebook },
+    { label: "Instagram", href: "https://www.instagram.com/lumina_literacy", Icon: FaInstagram },
+    { label: "YouTube", href: "https://youtube.com", Icon: FaYoutube },
+    { label: "TikTok", href: "https://www.tiktok.com/@lumina_literacy", Icon: FaTiktok },
 ];
 
 export default function Footer() {

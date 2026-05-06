@@ -3,100 +3,111 @@ import {
     Mail,
     Phone,
     MapPin,
-    ShieldCheck,
-    Database,
-    Users,
-    Lock,
-    FileText,
     BookOpen,
+    CreditCard,
+    CalendarClock,
+    Clock,
+    Users,
+    FileX,
+    ScrollText,
 } from "lucide-react";
 
 const sections = [
     {
-        id: "information-collected",
-        icon: Database,
-        title: "Information We Collect",
-        items: [
-            {
-                label: "Contact Information",
-                text: "When you fill out our contact form, we collect your name, email address, and phone number.",
-            },
-            {
-                label: "Educational Context",
-                text: "We may collect preliminary information about your child's learning needs (e.g., interests in dyslexia or autism support) to better prepare for your initial consultation.",
-            },
-            {
-                label: "Website Usage",
-                text: "Like most websites, we collect non-identifying data such as IP addresses and browser types via cookies to improve our site performance.",
-            },
-        ],
-    },
-    {
-        id: "data-use",
+        id: "tuition-services",
         icon: BookOpen,
-        title: "How We Use Your Data",
-        intro: "We use your information exclusively to:",
+        title: "Tuition & Services",
         items: [
-            { text: "Respond to your inquiries about our tuition services." },
-            { text: "Provide specialised, brain-based educational support." },
             {
-                text: "Send you progress updates and administrative information regarding your sessions.",
+                label: "Specialised Approach",
+                text: "Lumina provides evidence-based, multisensory literacy tuition tailored to the student's specific learning profile (Dyslexia).",
             },
-            { text: "Comply with legal and tax obligations in Ireland." },
+            {
+                label: "Initial Assessment",
+                text: "A preliminary consultation/assessment may be required to establish a baseline and set achievable goals.",
+            },
         ],
     },
     {
-        id: "special-category",
-        icon: ShieldCheck,
-        title: "Special Category Data",
-        body: "As specialists in neuro-literacy, we often process sensitive information regarding learning profiles and health. This data is handled with the highest level of confidentiality and is only processed with your explicit, written consent provided during the enrollment process.",
+        id: "payment-fees",
+        icon: CreditCard,
+        title: "Payment & Fees",
+        items: [
+            {
+                label: "Rates",
+                text: "Tuition fees are communicated prior to the first session.",
+            },
+            {
+                label: "Invoicing",
+                text: "Payments are due 24 hours before the session / on the day of the session.",
+            },
+            {
+                label: "Payment Methods",
+                text: "We accept Bank Transfer, Revolut, and Cash.",
+            },
+            {
+                label: "Late Payments",
+                text: "We reserve the right to suspend sessions if fees remain unpaid for more than two consecutive days.",
+            },
+        ],
     },
     {
-        id: "data-sharing",
+        id: "attendance-cancellation",
+        icon: CalendarClock,
+        title: "Attendance & Cancellation Policy",
+        intro: "Your session time is reserved exclusively for your child. To maintain a fair schedule:",
+        items: [
+            {
+                label: "Cancellations",
+                text: "At least 24 hours notice is required to cancel or reschedule a session.",
+            },
+            {
+                label: "Late Cancellations",
+                text: "Sessions cancelled with less than 24 hours notice will be charged at the full rate.",
+            },
+            {
+                label: "Tutor Absence",
+                text: "If Francis or a Lumina tutor must cancel, we will offer a makeup session or a full refund for that credit.",
+            },
+        ],
+    },
+    {
+        id: "punctuality",
+        icon: Clock,
+        title: "Punctuality",
+        body: "Sessions will begin and end strictly at the scheduled time. If a student arrives late, the session cannot be extended beyond the original end time as this impacts the next student's start time.",
+    },
+    {
+        id: "parental-involvement",
         icon: Users,
-        title: "Data Sharing & Third Parties",
+        title: "Parental Involvement & Conduct",
         items: [
             {
-                label: "No Selling",
-                text: "We never sell, rent, or trade your personal data to third parties.",
+                label: "The Studio Environment",
+                text: "To ensure focus, we ask that parents/guardians provide a quiet, distraction-free environment (online classes) or follow the studio's designated drop-off/pick-up protocols.",
             },
             {
-                label: "Confidentiality",
-                text: "We do not share student information with schools or clinicians without your express permission.",
-            },
-            {
-                label: "Security",
-                text: "We use secure, encrypted digital storage to protect your family's records.",
+                label: "Mutual Respect",
+                text: "We maintain a policy of restorative practice. We expect respectful communication between tutors, parents, and students at all times.",
             },
         ],
     },
     {
-        id: "gdpr-rights",
-        icon: FileText,
-        title: "Your GDPR Rights",
-        intro: "Under Irish and EU data protection laws, you have the right to:",
+        id: "termination",
+        icon: FileX,
+        title: "Termination of Service",
         items: [
             {
-                label: "Access",
-                text: "Request a copy of the personal data we hold.",
+                text: "Either party may terminate tuition with one week's notice.",
             },
             {
-                label: "Correction",
-                text: "Ask us to update or fix inaccurate information.",
-            },
-            {
-                label: "Erasure",
-                text: "Request that we delete your data (subject to legal record keeping requirements).",
-            },
-            {
-                label: "Withdrawal",
-                text: "Withdraw your consent for data processing at any time.",
+                text: "Lumina reserves the right to terminate services immediately in the event of persistent non-payment or behaviour that makes effective instruction impossible.",
             },
         ],
     },
 ];
 
-export default function PrivacyPolicy() {
+export default function TermsOfUse() {
     return (
         <div className="bg-brand-surface">
             {/* Hero */}
@@ -107,15 +118,14 @@ export default function PrivacyPolicy() {
                             Legal
                         </p>
                         <h1 className="mt-4 text-4xl font-semibold tracking-tight text-brand-on-navy sm:text-5xl">
-                            Parental Consent &amp; Data Processing Agreement
+                            Terms of Service
                         </h1>
                     </AnimateIn>
                     <AnimateIn delay={0.1}>
                         <p className="mt-5 max-w-2xl text-base leading-7 text-brand-on-navy/75 sm:text-lg">
-                            We are committed to protecting the privacy of our students and
-                            their families. This policy explains how we collect, use, and
-                            safeguard your data when you visit our website or engage our
-                            tuition services.
+                            By enrolling in tuition with Lumina, you agree to the following
+                            terms and conditions. These are designed to ensure a consistent,
+                            high-quality learning environment for every student.
                         </p>
                         <p className="mt-3 text-sm text-brand-on-navy/50">
                             Last Updated: April 2026
@@ -182,15 +192,15 @@ export default function PrivacyPolicy() {
                         <div className="rounded-2xl bg-brand-navy p-8 text-brand-on-navy shadow-sm">
                             <div className="mb-5 flex items-center gap-3">
                                 <span className="flex size-10 items-center justify-center rounded-full bg-brand-on-navy/15">
-                                    <Lock className="size-5 text-brand-gold" />
+                                    <ScrollText className="size-5 text-brand-gold" />
                                 </span>
                                 <h2 className="text-xl font-semibold text-brand-on-navy">
-                                    Contact Us
+                                    Questions About These Terms
                                 </h2>
                             </div>
                             <p className="mb-6 text-brand-on-navy/75">
-                                If you have any questions about this Privacy Policy or how your
-                                data is handled, please contact us.
+                                If you have any questions about these Terms of Service, please
+                                don&apos;t hesitate to get in touch with us directly.
                             </p>
                             <ul className="space-y-3">
                                 <li className="flex items-center gap-3">
@@ -224,8 +234,9 @@ export default function PrivacyPolicy() {
                         <div className="rounded-2xl border border-brand-gold/40 bg-brand-ivory px-8 py-6">
                             <p className="text-sm leading-relaxed text-brand-on-gold">
                                 <span className="font-semibold">Notice: </span>
-                                By creating an account or engaging our tuition services, you
-                                confirm that you have read and understood this Privacy Policy.
+                                By creating an account or enrolling in tuition with Lumina
+                                Neuro-Literacy Studio, you confirm that you have read and
+                                understood these Terms of Service.
                             </p>
                         </div>
                     </AnimateIn>

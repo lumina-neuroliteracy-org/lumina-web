@@ -15,7 +15,7 @@ export default function AboutSpecialist() {
                 <AnimateIn direction="left">
                     <figure>
                         <Image
-                            src="/tutor.png"
+                            src="/lumina-specialist.jpeg"
                             alt="Francis Tobin — Dyslexia Specialist"
                             width={480}
                             height={560}
@@ -64,8 +64,7 @@ export default function AboutSpecialist() {
                             independence.
                         </p>
                         <p>
-                            In partnership with his wife, Ebiojo, Francis co-founded Lumina — The
-                            Neuro-Literacy Studio. Together, they provide a high-support,
+                            In partnership with his wife, Ebiojo, Francis co-founded Lumina — Neuro-Literacy Studio. Together, they provide a high-support,
                             high-results environment where students move from guessing at words to
                             glowing with confidence. Their tuition service is built on the belief
                             that with the right multisensory tools, every child can unlock their

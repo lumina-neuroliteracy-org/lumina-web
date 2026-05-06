@@ -23,8 +23,8 @@ const contactDetails = [
     {
         icon: Phone,
         label: "Phone",
-        lines: ["087 4523 726", "087 4523 726"],
-        hrefs: ["tel:087 4523 726", "tel:087 4523 726"],
+        lines: ["087 4523 726"],
+        hrefs: ["tel:087 4523 726"],
     },
     {
         icon: Mail,
@@ -155,7 +155,7 @@ export default function ContactBody() {
                                     <Input
                                         id="phone"
                                         type="tel"
-                                        placeholder="+234 ..."
+                                        placeholder="+353 ..."
                                         value={phone}
                                         onChange={(e) => setPhone(e.target.value)}
                                         className="h-11 rounded-xl px-4"

@@ -34,7 +34,7 @@ const services: Service[] = [
         description:
             "An in-depth conversation to understand the learner's challenges, history, and goals — and map out the right next steps.",
         includes: [
-            "60-minute structured session",
+            "30-minute structured session",
             "Review of existing reports or assessments",
             "Written summary and recommendations",
             "Signposting to relevant resources",
