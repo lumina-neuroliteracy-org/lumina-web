@@ -43,6 +43,7 @@ export interface Event {
     type: EventType;
     date: string;
     href: string | null;
+    banner_image_url: string | null;
     is_published: boolean;
     created_by: string | null;
     created_at: string;

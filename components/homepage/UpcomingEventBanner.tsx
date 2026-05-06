@@ -1,3 +1,4 @@
+import Image from "next/image";
 import Link from "next/link";
 import { getNextEvent } from "@/lib/dal/events";
 import { EventCountdown } from "./EventCountdown";
@@ -24,6 +25,19 @@ export default async function UpcomingEventBanner() {
     return (
         <section className="w-full bg-brand-navy">
             <div className="mx-auto max-w-6xl px-5 py-10 sm:px-8">
+                {event.banner_image_url && (
+                    <div className="mb-6 w-full overflow-hidden rounded-xl">
+                        <Image
+                            src={event.banner_image_url}
+                            alt={event.title}
+                            width={1700}
+                            height={400}
+                            className="w-full h-auto"
+                            sizes="(max-width: 768px) 100vw, 1152px"
+                            priority
+                        />
+                    </div>
+                )}
                 <div className="flex flex-col items-start gap-8 lg:flex-row lg:items-center lg:justify-between">
                     {/* Left — event info */}
                     <div className="space-y-2">
