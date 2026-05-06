@@ -8,7 +8,7 @@ export default function AboutHero() {
         <section className="relative h-[70vh] min-h-120 w-full overflow-hidden">
             <Image
                 src="/hero-one.jpg"
-                alt="Luminar specialist working with a learner"
+                alt="Lumina specialist working with a learner"
                 fill
                 className="object-cover object-center"
                 priority
@@ -19,13 +19,13 @@ export default function AboutHero() {
             {/* Content */}
             <div className="absolute inset-0 flex flex-col items-center justify-center px-5 text-center sm:px-8">
                 <p className="text-sm font-semibold uppercase tracking-[0.18em] text-brand-gold">
-                    About Luminar
+                    About Lumina
                 </p>
                 <h1 className="mt-4 max-w-3xl text-4xl font-semibold tracking-tight text-balance text-brand-on-navy sm:text-5xl lg:text-6xl">
                     We believe every learner deserves to feel capable.
                 </h1>
                 <p className="mt-6 max-w-xl text-base leading-7 text-brand-on-navy/80 sm:text-lg">
-                    Luminar was built to close the gap between a dyslexia diagnosis and
+                    Lumina was built to close the gap between a dyslexia diagnosis and
                     real, confident progress.
                 </p>
                 <div className="mt-8 flex flex-col gap-3 sm:flex-row">

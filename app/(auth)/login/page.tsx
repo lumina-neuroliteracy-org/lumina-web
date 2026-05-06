@@ -56,12 +56,21 @@ export default function LoginPage() {
         e.preventDefault();
         setError(null);
         setLoading(true);
-        const { error } = await supabase.auth.signInWithPassword({ email, password });
+        const { data, error } = await supabase.auth.signInWithPassword({ email, password });
         setLoading(false);
         if (error) {
             setError(error.message);
         } else {
-            router.push("/");
+            const { data: profile } = await supabase
+                .from("profiles")
+                .select("role")
+                .eq("id", data.user.id)
+                .single();
+            const dest =
+                profile?.role === "admin" || profile?.role === "super_admin"
+                    ? "/admin/dashboard"
+                    : "/student/dashboard";
+            router.push(dest);
         }
     }
 

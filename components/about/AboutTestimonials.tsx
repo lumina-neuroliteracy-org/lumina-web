@@ -4,17 +4,17 @@ import { AnimateIn } from "@/components/AnimateIn";
 const testimonials = [
     {
         quote:
-            "Within three months my son was reading chapter books. More than that — he was choosing to read. That's what Luminar gave us.",
+            "Within three months my son was reading chapter books. More than that — he was choosing to read. That's what Lumina gave us.",
         author: "Parent of a 9-year-old learner",
     },
     {
         quote:
-            "The structured approach made the difference. We'd tried other tutors but nothing clicked until Luminar. The progress tracker helped us stay motivated.",
+            "The structured approach made the difference. We'd tried other tutors but nothing clicked until Lumina. The progress tracker helped us stay motivated.",
         author: "Mother, adult learner support",
     },
     {
         quote:
-            "As a class teacher I was skeptical at first. After partnering with Luminar for one term, two of my students made more progress than in the previous two years.",
+            "As a class teacher I was skeptical at first. After partnering with Lumina for one term, two of my students made more progress than in the previous two years.",
         author: "Primary school teacher",
     },
 ];

@@ -40,14 +40,14 @@ export default function AppSidebar() {
         <Link href="/" className="flex min-w-0 items-center gap-3">
           <Image
             src="/lumina-logo.png"
-            alt="Luminar logo"
+            alt="Lumina logo"
             width={32}
             height={32}
             priority
             className="size-8 shrink-0"
           />
           <span className="truncate text-sm font-semibold tracking-[0.22em] uppercase transition-[opacity,width] duration-200 group-data-[collapsible=icon]:w-0 group-data-[collapsible=icon]:opacity-0">
-            Luminar
+            Lumina
           </span>
         </Link>
       </SidebarHeader>

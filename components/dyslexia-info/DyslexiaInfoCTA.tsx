@@ -15,7 +15,7 @@ export default function DyslexiaInfoCTA() {
                             Have questions? We&apos;re here to help.
                         </h2>
                         <p className="mt-4 text-base leading-7 text-brand-muted">
-                            Whether you&apos;re a parent, an adult learner, or a teacher —
+                            Whether you&apos;re a parent, an adult learner, or a teacher,
                             reach out and we&apos;ll talk through the right next step.
                         </p>
                     </div>

@@ -8,7 +8,7 @@ export default function WhatIsDyslexia() {
                     What is dyslexia
                 </p>
                 <h2 className="mt-3 max-w-2xl text-3xl font-semibold tracking-tight text-brand-navy lg:text-4xl">
-                    A different way of processing — not a measure of ability.
+                    A different way of processing, not a measure of ability.
                 </h2>
             </AnimateIn>
 
@@ -16,7 +16,7 @@ export default function WhatIsDyslexia() {
                 <div className="mt-6 max-w-2xl space-y-4 text-base leading-8 text-brand-muted">
                     <p>
                         Dyslexia is a specific learning difference that primarily affects
-                        reading, writing, and spelling. It is neurological in origin —
+                        reading, writing, and spelling. It is neurological in origin,
                         meaning it relates to how the brain processes written language, not
                         how intelligent or hard-working a person is.
                     </p>

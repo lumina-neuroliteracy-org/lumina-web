@@ -6,7 +6,8 @@ import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea";
 import { Label } from "@/components/ui/label";
-import { Phone, Mail, MapPin, CheckCircle } from "lucide-react";
+import { Phone, Mail, MapPin, CheckCircle, Loader2 } from "lucide-react";
+import { submitContactForm } from "@/lib/actions/contact";
 
 type EnquiryType = "Book a session" | "General enquiry" | "School partnership";
 
@@ -16,24 +17,25 @@ const enquiryTypes: EnquiryType[] = [
     "School partnership",
 ];
 
+
+
 const contactDetails = [
     {
         icon: Phone,
         label: "Phone",
-        lines: ["+234 704 565 4324", "+234 704 365 4325"],
-        hrefs: ["tel:+2347045654324", "tel:+2347043654325"],
+        lines: ["087 4523 726"],
+        hrefs: ["tel:087 4523 726"],
     },
     {
         icon: Mail,
         label: "Email",
-        lines: ["hello@luminar.ng"],
-        hrefs: ["mailto:hello@luminar.ng"],
+        lines: ["info@lumina-literacy.ie"],
+        hrefs: ["mailto:info@lumina-literacy.ie"],
     },
     {
         icon: MapPin,
         label: "Address",
-        // Replace with real address
-        lines: ["123 Studio Road", "Lagos, Nigeria"],
+        lines: ["North Strand, Dublin 3", "Ireland"],
         hrefs: [null, null],
     },
 ];
@@ -45,12 +47,20 @@ export default function ContactBody() {
     const [phone, setPhone] = useState("");
     const [message, setMessage] = useState("");
     const [submitted, setSubmitted] = useState(false);
+    const [loading, setLoading] = useState(false);
+    const [formError, setFormError] = useState<string | null>(null);
 
-    function handleSubmit(e: React.FormEvent) {
+    async function handleSubmit(e: { preventDefault(): void }) {
         e.preventDefault();
-        // Wire to your email service or API route here
-        console.log({ enquiry, name, email, phone, message });
-        setSubmitted(true);
+        setLoading(true);
+        setFormError(null);
+        const { error } = await submitContactForm({ enquiry, name, email, phone, message });
+        setLoading(false);
+        if (error) {
+            setFormError(error);
+        } else {
+            setSubmitted(true);
+        }
     }
 
     return (
@@ -145,7 +155,7 @@ export default function ContactBody() {
                                     <Input
                                         id="phone"
                                         type="tel"
-                                        placeholder="+234 ..."
+                                        placeholder="+353 ..."
                                         value={phone}
                                         onChange={(e) => setPhone(e.target.value)}
                                         className="h-11 rounded-xl px-4"
@@ -165,12 +175,24 @@ export default function ContactBody() {
                                     />
                                 </div>
 
+                                {formError && (
+                                    <p className="text-sm text-red-500">{formError}</p>
+                                )}
+
                                 <Button
                                     type="submit"
                                     size="lg"
+                                    disabled={loading}
                                     className="w-full rounded-full"
                                 >
-                                    Send message
+                                    {loading ? (
+                                        <>
+                                            <Loader2 className="size-4 animate-spin" />
+                                            Sending…
+                                        </>
+                                    ) : (
+                                        "Send message"
+                                    )}
                                 </Button>
                             </form>
                         )}
@@ -197,14 +219,14 @@ export default function ContactBody() {
                                             {lines.map((line, i) =>
                                                 hrefs[i] ? (
                                                     <a
-                                                        key={line}
+                                                        key={i}
                                                         href={hrefs[i]!}
                                                         className="mt-0.5 block text-sm text-brand-navy transition-colors hover:text-brand-gold-strong"
                                                     >
                                                         {line}
                                                     </a>
                                                 ) : (
-                                                    <p key={line} className="mt-0.5 text-sm text-brand-navy">
+                                                    <p key={i} className="mt-0.5 text-sm text-brand-navy">
                                                         {line}
                                                     </p>
                                                 )
@@ -220,8 +242,8 @@ export default function ContactBody() {
                             <div className="relative w-full" style={{ paddingBottom: "56.25%" }}>
                                 <iframe
                                     className="absolute inset-0 h-full w-full"
-                                    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d253682.45843135456!2d3.1438710523208486!3d6.548055448792087!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x103b8b2ae68280c1%3A0xdc9e87a367c3d9cb!2sLagos%2C%20Nigeria!5e0!3m2!1sen!2sng!4v1714000000000"
-                                    title="Luminar location map"
+                                    src="https://www.google.com/maps?q=North+Strand,+Dublin+3,+Ireland&output=embed"
+                                    title="North Strand, Dublin 3, Ireland map"
                                     loading="lazy"
                                     referrerPolicy="no-referrer-when-downgrade"
                                     allowFullScreen

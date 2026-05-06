@@ -4,11 +4,13 @@ import HeroServices from "./Services";
 import WhyChooseUs from "./WhyChooseUs";
 import ContactBanner from "./ContactBanner";
 import AboutTestimonials from "../about/AboutTestimonials";
+import UpcomingEventBanner from "./UpcomingEventBanner";
 
 export default function Homepage() {
   return (
     <main className="bg-brand-surface">
       <Hero />
+      <UpcomingEventBanner />
       <VideoSection />
       <HeroServices />
       <ContactBanner />

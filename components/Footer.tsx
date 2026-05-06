@@ -13,21 +13,20 @@ const links = {
         { label: "Contact", href: "/contact" },
     ],
     Legal: [
-        { label: "Privacy policy", href: "/coming-soon" },
-        { label: "Terms of use", href: "/coming-soon" },
+        { label: "Privacy policy", href: "/privacy-policy" },
+        { label: "Terms of use", href: "/terms-of-use" },
     ],
 };
 
 const phones = [
-    { label: "+234 704 565 4324", href: "tel:+2347045654324" },
-    { label: "+234 704 365 4325", href: "tel:+2347043654325" },
+    { label: "087 4523 726", href: "tel:087 4523 726" }
 ];
 
 const socials = [
-    { label: "Facebook",  href: "https://facebook.com",  Icon: FaFacebook  },
-    { label: "Instagram", href: "https://instagram.com", Icon: FaInstagram },
-    { label: "YouTube",   href: "https://youtube.com",   Icon: FaYoutube   },
-    { label: "TikTok",    href: "https://tiktok.com",    Icon: FaTiktok    },
+    { label: "Facebook", href: "https://web.facebook.com/people/Lumina-Neuro-Literacy-Studio/61587695849659/", Icon: FaFacebook },
+    { label: "Instagram", href: "https://www.instagram.com/lumina_literacy", Icon: FaInstagram },
+    { label: "YouTube", href: "https://youtube.com", Icon: FaYoutube },
+    { label: "TikTok", href: "https://www.tiktok.com/@lumina_literacy", Icon: FaTiktok },
 ];
 
 export default function Footer() {
@@ -39,11 +38,11 @@ export default function Footer() {
                         {/* Brand */}
                         <div className="flex flex-col  gap-4">
                             <Link href="/">
-                                <Image src={logo} alt="Luminar logo" width={80} height={40} />
+                                <Image src={logo} alt="Lumina logo" width={80} height={40} />
                             </Link>
                             <div className="text-sm font-semibold text-brand-gold lg:block">
                                 <h3>LUMINA</h3>
-                                <p>THE NEURO-LITERACY STUDIO</p>
+                                <p>NEURO-LITERACY STUDIO</p>
                             </div>
                             <p className="max-w-xs text-sm leading-7 text-brand-on-navy/70">
                                 Confidence-first literacy support for families, schools, and
@@ -111,7 +110,7 @@ export default function Footer() {
                 <AnimateIn delay={0.15}>
                     <div className="mt-12 flex flex-col items-start justify-between gap-4 border-t border-brand-on-navy/10 pt-8 sm:flex-row sm:items-center text-white pb-4">
                         <p className="text-sm text-brand-on-navy/50">
-                            &copy; {new Date().getFullYear()} Luminar. All rights reserved.
+                            &copy; {new Date().getFullYear()} Lumina. All rights reserved.
                         </p>
                         <p className="text-sm text-brand-on-navy/50">
                             Built for learners who deserve better.

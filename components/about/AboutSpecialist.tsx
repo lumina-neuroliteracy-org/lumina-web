@@ -2,10 +2,10 @@ import Image from "next/image";
 import { AnimateIn } from "@/components/AnimateIn";
 
 const credentials = [
-    "Structured Literacy Practitioner",
-    "Dyslexia Association Certified",
-    "5+ Years Clinical Experience",
-    "Family & School Liaison",
+    "Autism Class Teacher",
+    "Dyslexia Ireland Tutor",
+    "Science of Reading",
+    "Multisensory Learning",
 ];
 
 export default function AboutSpecialist() {
@@ -13,13 +13,18 @@ export default function AboutSpecialist() {
         <section className="mx-auto w-full max-w-6xl px-5 py-10 sm:px-8 lg:py-16">
             <div className="grid gap-10 lg:grid-cols-[1fr_1.2fr] lg:items-center">
                 <AnimateIn direction="left">
-                    <Image
-                        src="/tutor.png"
-                        alt="Luminar specialist"
-                        width={480}
-                        height={560}
-                        className="w-full rounded-[2rem] object-cover shadow-[0_20px_60px_-20px_rgba(15,23,42,0.2)]"
-                    />
+                    <figure>
+                        <Image
+                            src="/lumina-specialist.jpeg"
+                            alt="Francis Tobin — Dyslexia Specialist"
+                            width={480}
+                            height={560}
+                            className="w-full rounded-[2rem] object-cover shadow-[0_20px_60px_-20px_rgba(15,23,42,0.2)]"
+                        />
+                        <figcaption className="mt-3 text-center text-sm text-brand-muted">
+                            Dyslexia Specialist — PMEP, B.A.Hons.
+                        </figcaption>
+                    </figure>
                 </AnimateIn>
 
                 <AnimateIn direction="right">
@@ -27,8 +32,7 @@ export default function AboutSpecialist() {
                         Meet the specialist
                     </p>
                     <h2 className="mt-3 text-3xl font-semibold tracking-tight text-brand-navy lg:text-4xl">
-                        {/* Replace with specialist name */}
-                        Jane Luminar
+                        Francis Tobin
                     </h2>
                     <div className="mt-4 flex flex-wrap gap-2">
                         {credentials.map((c) => (
@@ -42,17 +46,29 @@ export default function AboutSpecialist() {
                     </div>
                     <div className="mt-6 space-y-4 text-base leading-8 text-brand-muted">
                         <p>
-                            {/* Replace with real bio */}
-                            With over five years supporting learners from early childhood
-                            through adulthood, I've seen what happens when dyslexia is finally
-                            understood — not just diagnosed. Confidence returns. Progress
-                            compounds. Families breathe again.
+                            Francis Tobin is a leading specialist in Neuro-Literacy and Special
+                            Education, dedicated to helping students who struggle with traditional
+                            reading and writing models. With a career rooted in Dublin&apos;s primary
+                            and special education sectors, Francis brings a wealth of diverse
+                            classroom experience to support students with various learning
+                            requirements, including autism and dyslexia.
                         </p>
                         <p>
-                            My approach draws on structured literacy research and a genuine
-                            belief that the person in front of me knows things about their own
-                            learning that no assessment can capture. Every plan starts with
-                            listening.
+                            Francis&apos;s approach to tuition goes beyond simple homework or extra
+                            reading help. He specialises in evidence-based, multisensory methods
+                            designed to reshape how the brain processes language. His background
+                            includes extensive experience as an Autism Class Teacher and a tutor
+                            for Dyslexia Ireland, focusing on the science of reading, phonological
+                            mastery, and decoding and encoding skills, while helping students
+                            develop the focus and organisational skills necessary for academic
+                            independence.
+                        </p>
+                        <p>
+                            In partnership with his wife, Ebiojo, Francis co-founded Lumina Neuro-Literacy Studio. Together, they provide a high-support,
+                            high-results environment where students move from guessing at words to
+                            glowing with confidence. Their tuition service is built on the belief
+                            that with the right multisensory tools, every child can unlock their
+                            full literacy potential.
                         </p>
                     </div>
                 </AnimateIn>

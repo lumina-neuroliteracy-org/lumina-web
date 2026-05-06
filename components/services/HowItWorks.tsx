@@ -37,7 +37,7 @@ export default function HowItWorks() {
                     {steps.map((step, i) => (
                         <AnimateIn key={step.number} delay={0.1 * i}>
                             <div>
-                                <p className="text-4xl font-semibold text-brand-gold/30">
+                                <p className="text-4xl font-semibold text-brand-gold">
                                     {step.number}
                                 </p>
                                 <h3 className="mt-4 text-base font-semibold text-brand-on-navy">

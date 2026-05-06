@@ -5,17 +5,16 @@ import { AnimatePresence, motion } from "framer-motion";
 import { ChevronDown } from "lucide-react";
 import { AnimateIn } from "@/components/AnimateIn";
 
-// Replace answers with real content before going live
 const faqs = [
     {
         question: "What age groups do you work with?",
         answer:
-            "We support learners from early primary school (age 5) through to adults in higher education and the workplace. Each programme is designed around the individual, so age is never a barrier.",
+            "We focus specifically on the primary school years, typically supporting children aged 7 to 12. Intervening during these years takes advantage of a critical window of brain plasticity, allowing us to build foundational literacy skills and core confidence before the transition to secondary school. Our multisensory methods and specialized tools are specifically designed to be engaging and effective for this developmental stage.",
     },
     {
         question: "How long does a dyslexia assessment take?",
         answer:
-            "A full assessment typically takes 2–3 hours, sometimes split across two sessions. You'll receive a detailed written report within 10 working days of the final session.",
+            "A full assessment typically takes 1 hour, sometimes split across two sessions. You'll receive a detailed written report within 48 hours of the final session.",
     },
     {
         question: "Do you work with schools directly?",
@@ -25,7 +24,7 @@ const faqs = [
     {
         question: "How many tuition sessions will my child need?",
         answer:
-            "This varies depending on the learner's current level and goals. Most learners see meaningful progress within 10–12 weeks of consistent weekly sessions. We review progress regularly and adjust the plan as needed.",
+            "This varies depending on the learner's current level and goals. All learners see meaningful progress within 10–12 weeks of consistent weekly sessions. We review progress regularly and adjust the plan as needed.",
     },
     {
         question: "Are sessions in-person or online?",
@@ -35,7 +34,7 @@ const faqs = [
     {
         question: "What happens after the initial consultation?",
         answer:
-            "After the consultation you'll receive a written summary with clear recommendations. If you'd like to move forward, we'll agree a next step — whether that's a full assessment, a tuition programme, or a progress report.",
+            "After the consultation you'll receive a written summary with clear recommendations. If you'd like to move forward, we'll agree a next step, whether that's a full literacy assessment, a tuition programme, or a progress report.",
     },
 ];
 

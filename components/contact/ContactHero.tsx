@@ -16,7 +16,7 @@ export default function ContactHero() {
                 </AnimateIn>
                 <AnimateIn delay={0.1}>
                     <p className="mt-4 max-w-xl text-base leading-7 text-brand-on-navy/75 sm:text-lg">
-                        Book a session, ask a question, or tell us about your learner.
+                        Book a session, ask a question.
                         We&apos;ll get back to you promptly.
                     </p>
                 </AnimateIn>

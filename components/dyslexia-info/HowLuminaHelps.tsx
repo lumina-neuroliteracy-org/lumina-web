@@ -14,13 +14,13 @@ const cards: HelpCard[] = [
         icon: MessageCircle,
         title: "Consultations & Assessments",
         description:
-            "Start with a conversation — then a full assessment to understand the learner's specific profile and the right path forward.",
+            "Start with a conversation, then a full assessment to understand the learner's specific profile and the right path forward.",
     },
     {
         icon: GraduationCap,
         title: "Specialist Tuition",
         description:
-            "1:1 structured literacy sessions tailored to pace, strengths, and goals — not a one-size-fits-all script.",
+            "1:1 structured literacy sessions tailored to pace, strengths, and goals, not a one-size-fits-all script.",
     },
     {
         icon: FileText,
@@ -30,12 +30,12 @@ const cards: HelpCard[] = [
     },
 ];
 
-export default function HowLuminarHelps() {
+export default function HowLuminaHelps() {
     return (
         <section className="mx-auto w-full max-w-6xl px-5 py-10 sm:px-8 lg:py-16">
             <AnimateIn>
                 <p className="text-sm font-semibold uppercase tracking-[0.18em] text-brand-gold-strong">
-                    How Luminar helps
+                    How Lumina helps
                 </p>
                 <h2 className="mt-3 max-w-2xl text-3xl font-semibold tracking-tight text-brand-navy lg:text-4xl">
                     Support at every stage.

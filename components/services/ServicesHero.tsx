@@ -8,7 +8,7 @@ export default function ServicesHero() {
         <section className="relative h-[60vh] min-h-105 w-full overflow-hidden">
             <Image
                 src="/hero-one.jpg"
-                alt="Luminar specialist session in progress"
+                alt="Lumina specialist session in progress"
                 fill
                 className="object-cover object-center"
                 priority
@@ -23,7 +23,7 @@ export default function ServicesHero() {
                     Everything you need to move forward.
                 </h1>
                 <p className="mt-6 max-w-xl text-base leading-7 text-brand-on-navy/80">
-                    From first assessment to ongoing tuition — structured, evidence-based
+                    From first assessment to ongoing tuition, structured, evidence-based
                     support at every stage of the dyslexia journey.
                 </p>
                 <Button

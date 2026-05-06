@@ -6,7 +6,7 @@ const pillars = [
         icon: BookOpenCheck,
         title: "Structured Literacy",
         description:
-            "Explicit, systematic instruction in phonics, decoding, and fluency — the approach with the strongest evidence base for dyslexic learners.",
+            "Explicit, systematic instruction in phonics, decoding, and fluency, the approach with the strongest evidence base for dyslexic learners.",
     },
     {
         icon: FlaskConical,
@@ -18,7 +18,7 @@ const pillars = [
         icon: HeartHandshake,
         title: "Whole-Family Involvement",
         description:
-            "Parents and teachers are active partners — kept informed, equipped with strategies, and never left guessing what to do between sessions.",
+            "Parents and teachers are active partners, kept informed, equipped with strategies, and never left guessing what to do between sessions.",
     },
 ];
 
@@ -35,7 +35,7 @@ export default function AboutApproach() {
                     </h2>
                     <p className="mt-4 max-w-xl text-base leading-7 text-brand-on-navy/70">
                         Three principles guide every session, every plan, and every
-                        conversation at Luminar.
+                        conversation at Lumina.
                     </p>
                 </AnimateIn>
                 <div className="mt-10 grid gap-5 sm:grid-cols-3">

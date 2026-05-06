@@ -20,7 +20,7 @@ export default function Hero() {
                 </AnimateIn>
                 <AnimateIn delay={0.2}>
                     <p className="mt-6 max-w-xl text-lg leading-8 text-brand-muted">
-                        Luminar helps families, schools, and adult learners understand
+                        Lumina helps families, schools, and adult learners understand
                         dyslexia, access practical support, and move from uncertainty to
                         an actionable learning plan.
                     </p>

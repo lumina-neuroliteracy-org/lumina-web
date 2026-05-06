@@ -14,15 +14,15 @@ export default function AboutMission() {
             <AnimateIn delay={0.15}>
                 <div className="mt-6 max-w-2xl space-y-4 text-base leading-8 text-brand-muted">
                     <p>
-                        Luminar was founded on a simple conviction: that dyslexia is not a
-                        barrier to brilliance — it's a different way of processing the world
+                        Lumina was founded on a simple conviction: that dyslexia is not a
+                        barrier to brilliance, it's a different way of processing the world
                         that deserves a different kind of support. Too many learners spend
                         years feeling behind before anyone names what is actually happening.
                     </p>
                     <p>
                         We exist to shorten that gap. From the first conversation to a
                         structured, confidence-building plan, every step is designed around
-                        the learner — not a checklist, not a fixed curriculum, not
+                        the learner, not a checklist, not a fixed curriculum, not
                         one-size-fits-all scripts.
                     </p>
                 </div>
