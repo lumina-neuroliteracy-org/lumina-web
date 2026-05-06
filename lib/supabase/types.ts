@@ -33,6 +33,21 @@ export interface Resource {
     updated_at: string;
 }
 
+export type EventType = "webinar" | "seminar" | "event";
+
+export interface Event {
+    id: string;
+    title: string;
+    description: string | null;
+    type: EventType;
+    date: string;
+    href: string | null;
+    is_published: boolean;
+    created_by: string | null;
+    created_at: string;
+    updated_at: string;
+}
+
 export interface UserListEntry {
     id: string;
     full_name: string | null;

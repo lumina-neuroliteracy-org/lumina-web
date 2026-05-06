@@ -3,55 +3,7 @@
 import { useState } from "react";
 import { AnimateIn } from "@/components/AnimateIn";
 import { Button } from "@/components/ui/button";
-
-type EventType = "webinar" | "seminar" | "event";
-
-interface EventItem {
-    title: string;
-    date: string;
-    type: EventType;
-    cta: "Join" | "Register";
-    href: string;
-}
-
-// Replace with real upcoming events
-const events: EventItem[] = [
-    {
-        title: "Understanding Dyslexia: A Parent's Guide",
-        date: "15 May 2026",
-        type: "webinar",
-        cta: "Join",
-        href: "/contact",
-    },
-    {
-        title: "Early Identification of Dyslexia in the Classroom",
-        date: "22 May 2026",
-        type: "webinar",
-        cta: "Join",
-        href: "/contact",
-    },
-    {
-        title: "Structured Literacy in Practice",
-        date: "10 June 2026",
-        type: "seminar",
-        cta: "Register",
-        href: "/contact",
-    },
-    {
-        title: "Supporting Dyslexic Learners: School Staff Training",
-        date: "18 June 2026",
-        type: "seminar",
-        cta: "Register",
-        href: "/contact",
-    },
-    {
-        title: "Neuro-Literacy Family Open Day",
-        date: "5 July 2026",
-        type: "event",
-        cta: "Register",
-        href: "/contact",
-    },
-];
+import type { Event, EventType } from "@/lib/supabase/types";
 
 const tabs: { label: string; value: EventType }[] = [
     { label: "Webinars", value: "webinar" },
@@ -59,7 +11,15 @@ const tabs: { label: string; value: EventType }[] = [
     { label: "Events", value: "event" },
 ];
 
-export default function WorkshopsSection() {
+function formatDate(iso: string) {
+    return new Date(iso).toLocaleDateString("en-GB", {
+        day: "numeric",
+        month: "short",
+        year: "numeric",
+    });
+}
+
+export default function WorkshopsSection({ events }: { events: Event[] }) {
     const [active, setActive] = useState<EventType>("webinar");
 
     const filtered = events.filter((e) => e.type === active);
@@ -107,11 +67,11 @@ export default function WorkshopsSection() {
                     </p>
                 ) : (
                     filtered.map((item, i) => (
-                        <AnimateIn key={item.title} delay={0.05 * i}>
+                        <AnimateIn key={item.id} delay={0.05 * i}>
                             <div className="flex items-center justify-between gap-4 rounded-[1.5rem] border border-border bg-brand-card px-6 py-4 shadow-sm">
                                 <div className="flex flex-wrap items-center gap-3">
                                     <span className="rounded-full bg-brand-gold-soft px-3 py-1 text-xs font-medium text-brand-navy">
-                                        {item.date}
+                                        {formatDate(item.date)}
                                     </span>
                                     <p className="text-sm font-medium text-brand-navy">
                                         {item.title}
@@ -123,7 +83,13 @@ export default function WorkshopsSection() {
                                     size="sm"
                                     className="shrink-0 rounded-full"
                                 >
-                                    <a href={item.href}>{item.cta}</a>
+                                    <a
+                                        href={item.href ?? "/contact"}
+                                        target={item.href ? "_blank" : undefined}
+                                        rel={item.href ? "noopener noreferrer" : undefined}
+                                    >
+                                        Register
+                                    </a>
                                 </Button>
                             </div>
                         </AnimateIn>

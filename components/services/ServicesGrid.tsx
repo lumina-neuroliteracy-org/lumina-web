@@ -56,7 +56,7 @@ const services: Service[] = [
         ],
         price: "€100",
         priceNote: "initial assessment",
-        whatsappMessage: "Hi, I'd like to book a Literacy & Placement Assessment with Lumina. Could you let me know the next available slot?",
+        bookingHref: "https://tidycal.com/104qe7v/individual-dyslexia-tutoring-session",
     },
     {
         icon: GraduationCap,
@@ -71,7 +71,7 @@ const services: Service[] = [
         ],
         price: "From €45",
         priceNote: "per session",
-        whatsappMessage: "Hi, I'm interested in booking Specialist Dyslexia Tuition sessions with Lumina. Could you tell me more about availability?",
+        bookingHref: "https://tidycal.com/104qe7v/monthly-dyslexia-tutor-membership",
         priceTiers: [
             { label: "1 session", total: "€60" },
             { label: "2 sessions", total: "€100", perSession: "€50 each" },

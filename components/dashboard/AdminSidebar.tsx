@@ -2,7 +2,7 @@
 
 import Link from "next/link";
 import { usePathname, useRouter } from "next/navigation";
-import { LayoutDashboard, Video, FileText, Users, LogOut, Menu, X } from "lucide-react";
+import { LayoutDashboard, Video, FileText, Users, LogOut, Menu, X, CalendarDays } from "lucide-react";
 import { useState } from "react";
 import { createClient } from "@/lib/supabase/client";
 import type { Profile } from "@/lib/supabase/types";
@@ -12,6 +12,7 @@ const navItems = [
     { href: "/admin/dashboard", label: "Dashboard", icon: LayoutDashboard },
     { href: "/admin/live-classes", label: "Live Classes", icon: Video },
     { href: "/admin/resources", label: "Resources", icon: FileText },
+    { href: "/admin/events", label: "Events", icon: CalendarDays },
     { href: "/admin/users", label: "Users", icon: Users },
 ];
 
