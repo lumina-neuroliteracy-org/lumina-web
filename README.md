@@ -1,36 +1,64 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# Luminar
+
+A confidence-first literacy support platform helping families, schools, and adult learners understand and navigate dyslexia. Luminar connects learners with 1:1 guidance, live classes, workshops, and curated resources — turning uncertainty into actionable learning plans.
+
+## Tech Stack
+
+- **Framework** — Next.js (App Router) with TypeScript
+- **Styling** — Tailwind CSS v4 + shadcn/ui
+- **Backend** — Supabase (PostgreSQL + Auth)
+- **Email** — Resend
+- **Animations** — Framer Motion
+
+## Features
+
+- Public marketing site with services, workshops, and dyslexia education hub
+- Student portal — dashboard, live classes, resources, profile
+- Admin portal — user management, class/event/resource management, analytics
+- Role-based access control (student, admin, super_admin)
+- Dyslexia accessibility mode (font, spacing, and color adjustments)
 
 ## Getting Started
 
-First, run the development server:
-
 ```bash
+npm install
+cp .env.example .env.local   # add your Supabase and Resend keys
 npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+Open [http://localhost:3000](http://localhost:3000).
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+## Environment Variables
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+| Variable | Description |
+|---|---|
+| `NEXT_PUBLIC_SUPABASE_URL` | Your Supabase project URL |
+| `NEXT_PUBLIC_SUPABASE_ANON_KEY` | Supabase anon key |
+| `SUPABASE_SERVICE_ROLE_KEY` | Supabase service role key |
+| `RESEND_API_KEY` | Resend API key for transactional email |
 
-## Learn More
+## Scripts
 
-To learn more about Next.js, take a look at the following resources:
+```bash
+npm run dev      # development server
+npm run build    # production build
+npm run start    # production server
+npm run lint     # ESLint
+```
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+## Project Structure
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+```
+app/
+  (main)/      # public-facing pages
+  (auth)/      # sign in, sign up, reset password
+  (student)/   # student dashboard and portal
+  (admin)/     # admin dashboard and management
+components/    # reusable UI components
+lib/           # Supabase clients, server actions, utilities
+hooks/         # custom React hooks
+```
 
-## Deploy on Vercel
+## Deployment
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+Deployed on [Vercel](https://vercel.com). Add all environment variables in the Vercel project settings before deploying.
