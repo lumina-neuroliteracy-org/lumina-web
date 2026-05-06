@@ -14,7 +14,7 @@ export default function AboutPhilosophy() {
             <AnimateIn delay={0.15}>
                 <blockquote className="mt-8 border-l-4 border-brand-gold pl-6">
                     <p className="text-xl font-medium italic leading-8 text-brand-navy">
-                        "A child who struggles to read is not a child who cannot learn — they
+                        "A child who struggles to read is not a child who cannot learn, they
                         are a child who has not yet been taught in the way that works for
                         them."
                     </p>
@@ -23,14 +23,14 @@ export default function AboutPhilosophy() {
             <AnimateIn delay={0.25}>
                 <div className="mt-8 max-w-2xl space-y-4 text-base leading-8 text-brand-muted">
                     <p>
-                        We measure success in small, compounding wins — a word decoded
+                        We measure success in small, compounding wins, a word decoded
                         without hesitation, a paragraph read aloud without dread, a learner
                         who raises their hand in class for the first time. These moments
                         don't happen by accident. They happen through consistency, patience,
                         and a plan built for that specific person.
                     </p>
                     <p>
-                        Lumina is not a quick fix. It's a partnership — and we take that
+                        Lumina is not a quick fix. It's a partnership, and we take that
                         responsibility seriously for every family and school that trusts us
                         with their learner.
                     </p>

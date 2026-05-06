@@ -58,13 +58,13 @@ export default function AboutSpecialist() {
                             reading help. He specialises in evidence-based, multisensory methods
                             designed to reshape how the brain processes language. His background
                             includes extensive experience as an Autism Class Teacher and a tutor
-                            for Dyslexia Ireland — focusing on the science of reading, phonological
+                            for Dyslexia Ireland, focusing on the science of reading, phonological
                             mastery, and decoding and encoding skills, while helping students
                             develop the focus and organisational skills necessary for academic
                             independence.
                         </p>
                         <p>
-                            In partnership with his wife, Ebiojo, Francis co-founded Lumina — Neuro-Literacy Studio. Together, they provide a high-support,
+                            In partnership with his wife, Ebiojo, Francis co-founded Lumina Neuro-Literacy Studio. Together, they provide a high-support,
                             high-results environment where students move from guessing at words to
                             glowing with confidence. Their tuition service is built on the belief
                             that with the right multisensory tools, every child can unlock their

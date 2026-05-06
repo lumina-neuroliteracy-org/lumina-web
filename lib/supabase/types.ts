@@ -5,6 +5,7 @@ export interface Profile {
     full_name: string | null;
     avatar_url: string | null;
     role: Role;
+    is_active: boolean;
     created_at: string;
     updated_at: string;
 }
@@ -53,5 +54,7 @@ export interface UserListEntry {
     full_name: string | null;
     avatar_url: string | null;
     role: Role;
+    is_active: boolean;
+    email: string | null;
     created_at: string;
 }

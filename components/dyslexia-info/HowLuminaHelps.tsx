@@ -14,13 +14,13 @@ const cards: HelpCard[] = [
         icon: MessageCircle,
         title: "Consultations & Assessments",
         description:
-            "Start with a conversation — then a full assessment to understand the learner's specific profile and the right path forward.",
+            "Start with a conversation, then a full assessment to understand the learner's specific profile and the right path forward.",
     },
     {
         icon: GraduationCap,
         title: "Specialist Tuition",
         description:
-            "1:1 structured literacy sessions tailored to pace, strengths, and goals — not a one-size-fits-all script.",
+            "1:1 structured literacy sessions tailored to pace, strengths, and goals, not a one-size-fits-all script.",
     },
     {
         icon: FileText,

@@ -10,7 +10,7 @@ const benefits = [
     {
         icon: Users,
         title: "Whole-family support",
-        description: "Caregivers and teachers stay informed and involved — no one is left guessing what to do at home.",
+        description: "Caregivers and teachers stay informed and involved, no one is left guessing what to do at home.",
     },
     {
         icon: Clock,

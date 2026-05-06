@@ -16,7 +16,7 @@ export default function WhatIsDyslexia() {
                 <div className="mt-6 max-w-2xl space-y-4 text-base leading-8 text-brand-muted">
                     <p>
                         Dyslexia is a specific learning difference that primarily affects
-                        reading, writing, and spelling. It is neurological in origin —
+                        reading, writing, and spelling. It is neurological in origin,
                         meaning it relates to how the brain processes written language, not
                         how intelligent or hard-working a person is.
                     </p>

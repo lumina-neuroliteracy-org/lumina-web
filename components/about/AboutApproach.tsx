@@ -6,7 +6,7 @@ const pillars = [
         icon: BookOpenCheck,
         title: "Structured Literacy",
         description:
-            "Explicit, systematic instruction in phonics, decoding, and fluency — the approach with the strongest evidence base for dyslexic learners.",
+            "Explicit, systematic instruction in phonics, decoding, and fluency, the approach with the strongest evidence base for dyslexic learners.",
     },
     {
         icon: FlaskConical,
@@ -18,7 +18,7 @@ const pillars = [
         icon: HeartHandshake,
         title: "Whole-Family Involvement",
         description:
-            "Parents and teachers are active partners — kept informed, equipped with strategies, and never left guessing what to do between sessions.",
+            "Parents and teachers are active partners, kept informed, equipped with strategies, and never left guessing what to do between sessions.",
     },
 ];
 

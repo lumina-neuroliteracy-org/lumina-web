@@ -5,7 +5,8 @@ import { useRouter } from "next/navigation";
 import { toast } from "sonner";
 import { Users } from "lucide-react";
 import { Button } from "@/components/ui/button";
-import { setUserRole } from "@/lib/actions/users";
+import { Switch } from "@/components/ui/switch";
+import { setUserRole, setUserStatus } from "@/lib/actions/users";
 import type { Role, UserListEntry } from "@/lib/supabase/types";
 
 function formatDate(iso: string) {
@@ -26,21 +27,30 @@ export function AdminUsersClient({
     isSuperAdmin: boolean;
 }) {
     const router = useRouter();
-    const [pending, setPending] = useState<string | null>(null);
+    const [rolePending, setRolePending] = useState<string | null>(null);
+    const [statusPending, setStatusPending] = useState<string | null>(null);
 
-    async function handleRoleChange(
-        id: string,
-        currentRole: Role
-    ) {
-        const newRole =
-            currentRole === "student" ? "admin" : "student";
-        setPending(id);
+    async function handleRoleChange(id: string, currentRole: Role) {
+        const newRole = currentRole === "student" ? "admin" : "student";
+        setRolePending(id);
         const { error } = await setUserRole(id, newRole);
-        setPending(null);
+        setRolePending(null);
         if (error) {
             toast.error(error);
         } else {
             toast.success(`Role updated to ${newRole}`);
+            router.refresh();
+        }
+    }
+
+    async function handleStatusChange(id: string, currentActive: boolean) {
+        setStatusPending(id);
+        const { error } = await setUserStatus(id, !currentActive);
+        setStatusPending(null);
+        if (error) {
+            toast.error(error);
+        } else {
+            toast.success(!currentActive ? "Account activated" : "Account deactivated");
             router.refresh();
         }
     }
@@ -79,7 +89,13 @@ export function AdminUsersClient({
                                     Name
                                 </th>
                                 <th className="px-4 py-3 text-left font-medium text-brand-muted">
+                                    Email
+                                </th>
+                                <th className="px-4 py-3 text-left font-medium text-brand-muted">
                                     Role
+                                </th>
+                                <th className="px-4 py-3 text-left font-medium text-brand-muted">
+                                    Status
                                 </th>
                                 <th className="px-4 py-3 text-left font-medium text-brand-muted">
                                     Joined
@@ -104,6 +120,11 @@ export function AdminUsersClient({
                                             </span>
                                         )}
                                     </td>
+                                    <td className="px-4 py-3 text-brand-muted">
+                                        {p.email ?? (
+                                            <span className="italic">—</span>
+                                        )}
+                                    </td>
                                     <td className="px-4 py-3">
                                         <span
                                             className={`inline-flex items-center rounded-full px-2 py-0.5 text-xs font-medium ${roleBadge[p.role]}`}
@@ -112,6 +133,24 @@ export function AdminUsersClient({
                                                 ? "Super Admin"
                                                 : p.role}
                                         </span>
+                                    </td>
+                                    <td className="px-4 py-3">
+                                        <div className="flex items-center gap-2">
+                                            <Switch
+                                                checked={p.is_active}
+                                                disabled={p.role === "super_admin" || statusPending === p.id}
+                                                onCheckedChange={() =>
+                                                    handleStatusChange(p.id, p.is_active)
+                                                }
+                                            />
+                                            <span className={`text-xs font-medium ${p.is_active ? "text-green-700" : "text-brand-muted"}`}>
+                                                {statusPending === p.id
+                                                    ? "Saving…"
+                                                    : p.is_active
+                                                      ? "Active"
+                                                      : "Inactive"}
+                                            </span>
+                                        </div>
                                     </td>
                                     <td className="px-4 py-3 text-brand-muted">
                                         {formatDate(p.created_at)}
@@ -122,7 +161,7 @@ export function AdminUsersClient({
                                                 <Button
                                                     size="sm"
                                                     variant="outline"
-                                                    disabled={pending === p.id}
+                                                    disabled={rolePending === p.id}
                                                     onClick={() =>
                                                         handleRoleChange(
                                                             p.id,
@@ -131,7 +170,7 @@ export function AdminUsersClient({
                                                     }
                                                     className="rounded-full text-xs"
                                                 >
-                                                    {pending === p.id
+                                                    {rolePending === p.id
                                                         ? "Saving…"
                                                         : p.role === "student"
                                                           ? "Promote to Admin"
