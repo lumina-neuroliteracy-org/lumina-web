@@ -3,6 +3,7 @@
 import { useState } from "react";
 import Link from "next/link";
 import AuthShell from "@/components/auth/AuthShell";
+import registerImage from "@/public/register.jpeg";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { Label } from "@/components/ui/label";
@@ -53,7 +54,7 @@ export default function SignupPage() {
     }
 
     return (
-        <AuthShell>
+        <AuthShell image={registerImage} imageAlt="Register illustration">
             <div className="w-full max-w-sm space-y-6">
                 {submitted ? (
                     <div className="flex flex-col items-center gap-4 text-center">

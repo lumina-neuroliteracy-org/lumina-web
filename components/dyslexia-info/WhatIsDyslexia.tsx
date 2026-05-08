@@ -15,9 +15,8 @@ export default function WhatIsDyslexia() {
             <AnimateIn delay={0.15}>
                 <div className="mt-6 max-w-2xl space-y-4 text-base leading-8 text-brand-muted">
                     <p>
-                        Dyslexia is a specific learning difference that primarily affects
-                        reading, writing, and spelling. It is neurological in origin,
-                        meaning it relates to how the brain processes written language, not
+                        According to the 2025 Delphi study and as agreed by dyslexia specific organizations in the UK and Ireland, dyslexia is defined as 'A set of processing difficulties that affects how people learn to read and spell.' It also recognises that it is a neurological condition and requires a more inclusive and neurodiverse approach to intervention and learning. It is neurological,
+                        meaning it relates to how the brain processes language, not
                         how intelligent or hard-working a person is.
                     </p>
                     <p>

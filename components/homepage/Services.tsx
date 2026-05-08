@@ -5,17 +5,17 @@ const serviceCards = [
     {
         title: "Screening Support",
         description:
-            "Early observation tools and guided next steps for families, schools, and adult learners.",
+            "Early observation tools and guided next steps for everyone involved in the learning journey.",
     },
     {
         title: "Learning Plans",
         description:
-            "Structured, human-centered interventions designed around pace, strengths, and confidence.",
+            "Systematic, explicit, targeted, focused intervention with structured literacy framework custom designed to meet your child's pace, strengths, confidence and needs.",
     },
     {
         title: "Progress Tracking",
         description:
-            "Clear milestones that help caregivers and educators see what is improving and what needs support.",
+            "Specific, measurable, achievable, realistic and concise targets that help make clear what is improving and what needs support.",
     },
 ];
 

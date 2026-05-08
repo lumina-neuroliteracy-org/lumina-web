@@ -4,6 +4,7 @@ import { useState } from "react";
 import Link from "next/link";
 import { useRouter } from "next/navigation";
 import AuthShell from "@/components/auth/AuthShell";
+import loginImage from "@/public/login.jpeg";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { Label } from "@/components/ui/label";
@@ -75,7 +76,7 @@ export default function LoginPage() {
     }
 
     return (
-        <AuthShell>
+        <AuthShell image={loginImage} imageAlt="Login illustration">
             <div className="w-full max-w-sm space-y-6">
                 <div className="space-y-1 text-center">
                     <h1 className="text-2xl font-semibold text-brand-navy">Welcome back</h1>
