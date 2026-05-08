@@ -10,17 +10,17 @@ const benefits = [
     {
         icon: Users,
         title: "Whole-family support",
-        description: "Caregivers and teachers stay informed and involved, no one is left guessing what to do at home.",
+        description: "Learners and Parents/ guardians stay informed and involved. No one is left guessing. Tailored advice and recommendations given after the program concludes.",
     },
     {
         icon: Clock,
         title: "Flexible and consistent",
-        description: "Sessions fit around real schedules, and plans stay consistent even as life changes.",
+        description: "Sessions fit around real life work and school schedules and we allow for plans to stay consistent even as life changes.",
     },
     {
         icon: ShieldCheck,
         title: "Safe, low-pressure space",
-        description: "Learners build at their own pace in an environment designed to reduce anxiety and grow self-trust.",
+        description: "Learners grow at their own pace in a safe and trusting environment, designed to reduce anxiety and raise self-belief.",
     },
 ];
 

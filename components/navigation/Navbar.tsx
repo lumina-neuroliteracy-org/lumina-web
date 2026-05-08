@@ -37,9 +37,9 @@ export function Navbar() {
             <div className="mx-auto flex max-w-6xl items-center justify-between px-6 py-4 lg:px-10">
                 <div className="flex items-center gap-3">
                     <Link href="/" className="flex gap-2">
-                        <Image src={logo} alt="Loger logo" width={80} height={40} />
+                        <Image src={logo} alt="Lumina logo" width={80} height={40} />
                     </Link>
-                    <div className="hidden text-sm font-semibold text-brand-gold lg:block">
+                    <div className="text-xs lg:text-sm font-semibold text-brand-gold lg:block">
                         <h3>LUMINA</h3>
                         <p> NEURO-LITERACY STUDIO</p>
                     </div>

@@ -46,7 +46,7 @@ export default function Footer() {
                             </div>
                             <p className="max-w-xs text-sm leading-7 text-brand-on-navy/70">
                                 Confidence-first literacy support for families, schools, and
-                                adult learners navigating dyslexia.
+                                communities navigating dyslexia.
                             </p>
                         </div>
 

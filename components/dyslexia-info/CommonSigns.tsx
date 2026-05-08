@@ -1,24 +1,29 @@
 import { AnimateIn } from "@/components/AnimateIn";
 
 const childrenSigns = [
-    "Difficulty learning to read despite effort",
-    "Slow or inaccurate reading out loud",
-    "Spelling the same word differently in one piece of writing",
-    "Confusing similar-looking letters (b/d, p/q)",
-    "Difficulty remembering sequences (alphabet, days of the week)",
-    "Avoiding reading or writing tasks",
+    "Continued difficulty reading text aloud or silently.",
+    "Spelling is inappropriate for age and general ability (e.g. Spelling the same word differently on the same page.",
+    "Use of bizarre spelling patterns, frequent letter omissions, additions and transposition).",
+    "Lacks self-confidence and has low self-esteem.",
+    "Has difficulty planning or organizing.",
+    "Avoiding reading or writing tasks.",
 ];
 
-const adultSigns = [
-    "Reading slowly or needing to re-read text to understand it",
-    "Difficulty spelling common words",
-    "Struggling to take notes while listening",
-    "Avoiding tasks that involve a lot of reading or writing",
-    "Difficulty with directions, left/right confusion",
-    "Strong verbal ability that doesn't match written work",
-];
+// const adultSigns = [
+//     "Reading slowly or needing to re-read text to understand it",
+//     "Difficulty spelling common words",
+//     "Struggling to take notes while listening",
+//     "Avoiding tasks that involve a lot of reading or writing",
+//     "Difficulty with directions, left/right confusion",
+//     "Strong verbal ability that doesn't match written work",
+// ];
 
-function SignCard({ heading, signs, direction }: { heading: string; signs: string[]; direction: "left" | "right" }) {
+function SignCard({ heading, signs, direction, resourceLink }: {
+    heading: string;
+    signs: string[];
+    direction: "left" | "right";
+    resourceLink?: { href: string; label: string };
+}) {
     return (
         <AnimateIn direction={direction}>
             <div className="h-full rounded-[1.75rem] border border-border bg-brand-card p-6 shadow-sm">
@@ -31,6 +36,16 @@ function SignCard({ heading, signs, direction }: { heading: string; signs: strin
                         </li>
                     ))}
                 </ul>
+                {resourceLink && (
+                    <a
+                        href={resourceLink.href}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="mt-5 inline-block text-sm font-medium text-brand-navy underline underline-offset-4 hover:text-brand-gold-strong"
+                    >
+                        {resourceLink.label}
+                    </a>
+                )}
             </div>
         </AnimateIn>
     );
@@ -49,8 +64,13 @@ export default function CommonSigns() {
             </AnimateIn>
 
             <div className="mt-10 grid gap-6 lg:grid-cols-2">
-                <SignCard heading="Signs in children" signs={childrenSigns} direction="left" />
-                <SignCard heading="Signs in adults" signs={adultSigns} direction="right" />
+                <SignCard
+                    heading="Signs in children"
+                    signs={childrenSigns}
+                    direction="left"
+                    resourceLink={{ href: "https://dyslexia.ie/info-hub/about-dyslexia/what-is-dyslexia/", label: "Visit Dyslexia Ireland for more resources" }}
+                />
+                {/* <SignCard heading="Signs in adults" signs={adultSigns} direction="right" /> */}
             </div>
 
             <AnimateIn delay={0.2}>

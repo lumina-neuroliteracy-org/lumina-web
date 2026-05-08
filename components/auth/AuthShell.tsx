@@ -1,7 +1,13 @@
-import Image from "next/image";
+import Image, { StaticImageData } from "next/image";
 import logo from "@/public/lumina-logo.png";
 
-export default function AuthShell({ children }: { children: React.ReactNode }) {
+interface AuthShellProps {
+    children: React.ReactNode;
+    image?: StaticImageData | string;
+    imageAlt?: string;
+}
+
+export default function AuthShell({ children, image, imageAlt = "Auth illustration" }: AuthShellProps) {
     return (
         <div className="mx-auto max-w-5xl px-5 py-10 sm:px-8">
             <div className="flex min-h-140 overflow-hidden rounded-[2rem] shadow-xl">
@@ -14,11 +20,24 @@ export default function AuthShell({ children }: { children: React.ReactNode }) {
                         height={72}
                         className="rounded-full"
                     />
-                    <p className="text-xl font-semibold tracking-tight text-brand-on-navy">
-                        Lumina
-                    </p>
-                    <div className="mt-4 w-full flex-1 rounded-[1.5rem] bg-brand-on-navy/10 flex items-center justify-center">
-                        <span className="text-4xl text-brand-on-navy/20">✦</span>
+                    <div className="text-xs lg:text-sm font-semibold text-brand-gold lg:block text-center">
+                        <h3>LUMINA</h3>
+                        <p> NEURO-LITERACY STUDIO</p>
+                    </div>
+                    <div className="mt-4 w-full flex-1 relative overflow-hidden rounded-[1.5rem]">
+                        {image ? (
+                            <Image
+                                src={image}
+                                alt={imageAlt}
+                                fill
+                                className="object-cover"
+                                sizes="(min-width: 1024px) 40vw, 0px"
+                            />
+                        ) : (
+                            <div className="flex h-full items-center justify-center bg-brand-on-navy/10">
+                                <span className="text-4xl text-brand-on-navy/20">✦</span>
+                            </div>
+                        )}
                     </div>
                 </div>
 

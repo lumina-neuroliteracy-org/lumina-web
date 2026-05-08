@@ -1,8 +1,6 @@
-"use client";
-
 import { AnimateIn } from "../AnimateIn";
 
-export default function VideoSection() {
+export default function VideoSection({ youtubeUrl }: { youtubeUrl: string }) {
     return (
         <section className="mx-auto w-full max-w-6xl px-5 py-10 sm:px-8 lg:py-16">
             <AnimateIn>
@@ -13,7 +11,7 @@ export default function VideoSection() {
                     See what working together actually looks like.
                 </h2>
                 <p className="mt-4 max-w-xl text-base leading-7 text-brand-muted">
-                    A short overview of how Lumina supports learners, families, and schools from first conversation to lasting progress.
+                    A short overview of how Lumina supports learners, families, and schools from the first conversation to lasting progress.
                 </p>
             </AnimateIn>
             <AnimateIn delay={0.15}>
@@ -21,7 +19,7 @@ export default function VideoSection() {
                     <div className="relative w-full" style={{ paddingBottom: "56.25%" }}>
                         <iframe
                             className="absolute inset-0 h-full w-full"
-                            src="https://www.youtube.com/embed/dQw4w9WgXcQ"
+                            src={youtubeUrl}
                             title="How Lumina helps learners with dyslexia"
                             allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
                             allowFullScreen

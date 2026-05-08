@@ -4,18 +4,18 @@ import { AnimateIn } from "@/components/AnimateIn";
 const testimonials = [
     {
         quote:
-            "Within three months my son was reading chapter books. More than that — he was choosing to read. That's what Lumina gave us.",
+            "Within three months my son was reading books. More than that, he was choosing to read. That's what Lumina gave us.",
         author: "Parent of a 9-year-old learner",
     },
     {
         quote:
-            "The structured approach made the difference. We'd tried other tutors but nothing clicked until Lumina. The progress tracker helped us stay motivated.",
-        author: "Mother, adult learner support",
+            "The structured literacy approach made the difference. We'd tried other tutors but nothing clicked until Lumina. The progress tracker helped us stay motivated and focused on our goals.",
+        author: "Leanne, mother of 11 year old learner",
     },
     {
         quote:
-            "As a class teacher I was skeptical at first. After partnering with Lumina for one term, two of my students made more progress than in the previous two years.",
-        author: "Primary school teacher",
+            "As a class teacher I was skeptical at first. After partnering with Lumina for one intensive block, two of my students made more progress than in the previous two terms.",
+        author: "Rory, 4th class primary school teacher",
     },
 ];
 

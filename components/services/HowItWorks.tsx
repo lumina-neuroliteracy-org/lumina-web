@@ -5,19 +5,19 @@ const steps = [
         number: "01",
         title: "Book a consultation",
         description:
-            "Share your situation and goals in a relaxed, no-pressure conversation. We'll figure out the right starting point together.",
+            "Share your concerns and your goals in a relaxed, no-pressure conversation. Together we'll figure out the right starting point on our learning journey.",
     },
     {
         number: "02",
         title: "Receive your plan",
         description:
-            "Get a tailored assessment and a structured programme built around the learner's specific profile, pace, and strengths.",
+            "Get a tailored assessment and a structured program built around the learner's specific profile, pace, and strengths.",
     },
     {
         number: "03",
         title: "Track your progress",
         description:
-            "Regular milestones, progress reports, and open communication keep the whole family and school team informed at every step.",
+            "Regular milestones, progress reports, and open communication keep everyone involved on our learning journey informed at every step of the way",
     },
 ];
 

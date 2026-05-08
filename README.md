@@ -1,6 +1,6 @@
 # Luminar
 
-A confidence-first literacy support platform helping families, schools, and adult learners understand and navigate dyslexia. Luminar connects learners with 1:1 guidance, live classes, workshops, and curated resources — turning uncertainty into actionable learning plans.
+A confidence-first literacy support platform helping families, schools, and communities understand and navigate dyslexia. Luminar connects learners with 1:1 guidance, live classes, workshops, and curated resources — turning uncertainty into actionable learning plans.
 
 ## Tech Stack
 

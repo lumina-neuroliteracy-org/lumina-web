@@ -32,7 +32,7 @@ const services: Service[] = [
         icon: MessageCircle,
         title: "Dyslexia Consultation",
         description:
-            "An in-depth conversation to understand the learner's challenges, history, and goals — and map out the right next steps.",
+            "An in-depth conversation to understand the learner's challenges, history and goals, and map out the right next steps.",
         includes: [
             "30-minute structured session",
             "Review of existing reports or assessments",
@@ -47,12 +47,11 @@ const services: Service[] = [
         icon: ClipboardList,
         title: "Literacy & Placement Assessment",
         description:
-            "A comprehensive, evidence-based assessment that identifies strengths, challenges, and the specific profile of the learner's dyslexia.",
+            "A comprehensive, evidence-based assessment that identifies strengths, challenges, and priority areas of concern.",
         includes: [
-            "Full cognitive and literacy assessment",
+            "Full diagnostic phonological awareness and literacy assessment",
             "Detailed written report",
-            "Diagnosis and profile summary",
-            "Recommendations for school and home",
+            "Collaborative agreement based on assessment findings to tailor program to the learner's specific needs",
         ],
         price: "€100",
         priceNote: "initial assessment",
@@ -64,8 +63,8 @@ const services: Service[] = [
         description:
             "Ongoing 1:1 sessions using structured literacy techniques, tailored to the learner's pace, strengths, and current level.",
         includes: [
-            "Weekly or bi-weekly sessions",
-            "Structured literacy programme",
+            "Weekly sessions",
+            "Structured literacy program - Intensive, Explicit, Systematic and focused instruction.",
             "Home practice materials",
             "Regular progress updates for parents",
         ],
@@ -73,10 +72,10 @@ const services: Service[] = [
         priceNote: "per session",
         bookingHref: "https://tidycal.com/104qe7v/monthly-dyslexia-tutor-membership",
         priceTiers: [
-            { label: "1 session", total: "€60" },
-            { label: "2 sessions", total: "€100", perSession: "€50 each" },
-            { label: "3 sessions", total: "€150", perSession: "€50 each" },
-            { label: "4 sessions", total: "€180", perSession: "€45 each" },
+            { label: "1 session per week", total: "€60" },
+            { label: "2 sessions per week", total: "€110", perSession: "€55 each" },
+            { label: "3 sessions per week", total: "€150", perSession: "€50 each" },
+            { label: "4 sessions per week", total: "€180", perSession: "€45 each" },
         ],
     },
     {
@@ -85,8 +84,8 @@ const services: Service[] = [
         description:
             "Clear, detailed reports showing what has improved, what still needs support, and the plan going forward.",
         includes: [
-            "Standardised progress measures",
-            "Comparison to baseline assessment",
+            "Tailored progress target report",
+            "Concluding assessment to compare to initial assessment",
             "Updated learning plan",
             "Suitable for school review meetings",
         ],

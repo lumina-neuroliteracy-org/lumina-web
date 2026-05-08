@@ -18,15 +18,15 @@ const cards: HelpCard[] = [
     },
     {
         icon: GraduationCap,
-        title: "Specialist Tuition",
+        title: "Expert Dyslexia Specialist Tuition",
         description:
-            "1:1 structured literacy sessions tailored to pace, strengths, and goals, not a one-size-fits-all script.",
+            "1:1 Structured literacy sessions delivered by an expert dyslexia specialist with experience teaching in a reading intervention school and with the Dyslexia Association of Ireland.",
     },
     {
         icon: FileText,
         title: "Progress Reports",
         description:
-            "Clear, regular reports so families and schools can see exactly what's improving and what needs more focus.",
+            "Clear, regular reports so everyone involved can see exactly what's improving and what needs more focus.",
     },
 ];
 

@@ -20,7 +20,7 @@ export default function Hero() {
                 </AnimateIn>
                 <AnimateIn delay={0.2}>
                     <p className="mt-6 max-w-xl text-lg leading-8 text-brand-muted">
-                        Lumina helps families, schools, and adult learners understand
+                        Lumina helps families, schools, and communities understand
                         dyslexia, access practical support, and move from uncertainty to
                         an actionable learning plan.
                     </p>
@@ -48,8 +48,7 @@ export default function Hero() {
                                 <p className="text-sm text-brand-on-navy/80">Support that adapts</p>
                                 <p className="mt-8 text-3xl font-semibold">1:1 guidance</p>
                                 <p className="mt-3 text-sm leading-6 text-brand-on-navy/80">
-                                    Practical interventions shaped around the learner instead of
-                                    a one-size-fits-all script.
+                                    Intensive, explicit and focused interventions grounded in structured literacy shaped around the learner instead of a one-size-fits-all script.
                                 </p>
                             </div>
                         </AnimateIn>
@@ -58,7 +57,7 @@ export default function Hero() {
                                 <HeartHandshake className="size-8" />
                                 <p className="mt-6 text-2xl font-semibold">Family-centered</p>
                                 <p className="mt-3 text-sm leading-6 text-brand-navy/80">
-                                    Clear communication for caregivers, teachers, and learners.
+                                    Clear communication for all involved in the learning journey - learners, parents/guardians - we are all working towards the same goal.
                                 </p>
                             </div>
                         </AnimateIn>
@@ -81,7 +80,7 @@ export default function Hero() {
                                             02
                                         </p>
                                         <p className="mt-2 text-sm text-brand-muted">
-                                            Build a structured plan with realistic milestones.
+                                            Build a structured plan with realistic targets.
                                         </p>
                                     </div>
                                     <div>
