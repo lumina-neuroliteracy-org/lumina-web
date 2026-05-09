@@ -45,8 +45,7 @@ export default function Footer() {
                                 <p>NEURO-LITERACY STUDIO</p>
                             </div>
                             <p className="max-w-xs text-sm leading-7 text-brand-on-navy/70">
-                                Confidence-first literacy support for families, schools, and
-                                communities navigating dyslexia.
+                                Confidence-first literacy support for children, families and schools navigating dyslexia.
                             </p>
                         </div>
 
