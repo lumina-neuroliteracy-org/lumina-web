@@ -6,7 +6,7 @@ const pillars = [
         icon: BookOpenCheck,
         title: "Structured Literacy",
         description:
-            "Explicit, systematic instruction in phonics, decoding, and fluency, the approach with the strongest evidence base for dyslexic learners.",
+            "Explicit, intensive, focused and structured instruction on a regular basis in phonics, decoding, and fluency, the approach with the strongest evidence base for dyslexic learners.",
     },
     {
         icon: FlaskConical,
@@ -18,7 +18,7 @@ const pillars = [
         icon: HeartHandshake,
         title: "Whole-Family Involvement",
         description:
-            "Parents and teachers are active partners, kept informed, equipped with strategies, and never left guessing what to do between sessions.",
+            "Parents and guardians are active partners, kept informed, equipped with strategies, and never left guessing what to do between sessions.",
     },
 ];
 
@@ -40,8 +40,8 @@ export default function AboutApproach() {
                 </AnimateIn>
                 <div className="mt-10 grid gap-5 sm:grid-cols-3">
                     {pillars.map((pillar, i) => (
-                        <AnimateIn key={pillar.title} delay={0.1 * i}>
-                            <div className="rounded-[1.5rem] border border-brand-on-navy/10 bg-brand-on-navy/5 p-6">
+                        <AnimateIn key={pillar.title} delay={0.1 * i} className="h-full">
+                            <div className="h-full rounded-[1.5rem] border border-brand-on-navy/10 bg-brand-on-navy/5 p-6">
                                 <div className="flex size-10 items-center justify-center rounded-full bg-brand-gold-soft text-brand-gold-strong">
                                     <pillar.icon className="size-5" />
                                 </div>

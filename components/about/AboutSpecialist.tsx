@@ -4,7 +4,7 @@ import { AnimateIn } from "@/components/AnimateIn";
 const credentials = [
     "Autism Class Teacher",
     "Dyslexia Ireland Tutor",
-    "Science of Reading",
+    "Reading School Teacher",
     "Multisensory Learning",
 ];
 
@@ -22,7 +22,7 @@ export default function AboutSpecialist() {
                             className="w-full rounded-[2rem] object-cover shadow-[0_20px_60px_-20px_rgba(15,23,42,0.2)]"
                         />
                         <figcaption className="mt-3 text-center text-sm text-brand-muted">
-                            Dyslexia Specialist — PMEP, B.A.Hons.
+                            Dyslexia Specialist - Tutor and Professional Member of Dyslexia Ireland, PMEP, B.A. Hons
                         </figcaption>
                     </figure>
                 </AnimateIn>
@@ -46,29 +46,13 @@ export default function AboutSpecialist() {
                     </div>
                     <div className="mt-6 space-y-4 text-base leading-8 text-brand-muted">
                         <p>
-                            Francis Tobin is a leading specialist in Neuro-Literacy and Special
-                            Education, dedicated to helping students who struggle with traditional
-                            reading and writing models. With a career rooted in Dublin&apos;s primary
-                            and special education sectors, Francis brings a wealth of diverse
-                            classroom experience to support students with various learning
-                            requirements, including autism and dyslexia.
+                            Francis Tobin is a leading specialist in Neuro-Literacy and Special Education, dedicated to helping students who struggle with traditional reading and writing models. With a career rooted in Dublin&apos;s primary and special education sectors, Francis brings a wealth of diverse classroom experience to support students with various learning requirements, including autism, ADHD, PDA and in particular dyslexia.
                         </p>
                         <p>
-                            Francis&apos;s approach to tuition goes beyond simple homework or extra
-                            reading help. He specialises in evidence-based, multisensory methods
-                            designed to reshape how the brain processes language. His background
-                            includes extensive experience as an Autism Class Teacher and a tutor
-                            for Dyslexia Ireland, focusing on the science of reading, phonological
-                            mastery, and decoding and encoding skills, while helping students
-                            develop the focus and organisational skills necessary for academic
-                            independence.
+                            Francis&apos;s approach to tuition goes beyond simple homework or extra reading help. He specialises in evidence based, structured literacy, multisensory methods designed to reshape how the brain processes language and turn 'word guessers' into what he calls 'word detectives'. His background includes extensive experience as an Autism Class Teacher, Reading School Teacher, Mainstream Class teacher, SET and a tutor for Dyslexia Ireland. His sessions focus on structured literacy teaching, including phonological mastery and decoding/encoding skills and unique literacy laboratories. He takes pride in helping students develop the confidence, self belief, focus and organisational skills as well as the word detective skills necessary for academic independence.
                         </p>
                         <p>
-                            In partnership with his wife, Ebiojo, Francis co-founded Lumina Neuro-Literacy Studio. Together, they provide a high-support,
-                            high-results environment where students move from guessing at words to
-                            glowing with confidence. Their tuition service is built on the belief
-                            that with the right multisensory tools, every child can unlock their
-                            full literacy potential.
+                            Francis co-founded Lumina Neuro-Literacy Studio with a shared vision: to create a high support, high results environment where children move from guessing at words to glowing with confidence. Built on the belief that every child with the right multisensory methods and tools and the right expert guidance can unlock their full literacy potential.
                         </p>
                     </div>
                 </AnimateIn>
