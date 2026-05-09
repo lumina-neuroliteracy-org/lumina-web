@@ -30,9 +30,7 @@ export default function AboutPhilosophy() {
                         and a plan built for that specific person.
                     </p>
                     <p>
-                        Lumina is not a quick fix. It's a partnership, and we take that
-                        responsibility seriously for every family and school that trusts us
-                        with their learner.
+                        Our tuition is not a quick fix, it's a partnership and a step by step approach to long lasting results. We take that responsibility seriously for every family and school that trusts us with their learner.
                     </p>
                 </div>
             </AnimateIn>

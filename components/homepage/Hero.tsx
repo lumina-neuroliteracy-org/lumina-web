@@ -43,8 +43,8 @@ export default function Hero() {
             <AnimateIn delay={0.2} direction="right">
                 <div className="rounded-[2rem] border border-border bg-brand-card p-6 shadow-[0_30px_80px_-40px_rgba(15,23,42,0.25)]">
                     <div className="grid gap-4 sm:grid-cols-2">
-                        <AnimateIn delay={0.3}>
-                            <div className="rounded-[1.5rem] bg-brand-navy p-6 text-brand-on-navy">
+                        <AnimateIn delay={0.3} className="h-full">
+                            <div className="h-full rounded-[1.5rem] bg-brand-navy p-6 text-brand-on-navy">
                                 <p className="text-sm text-brand-on-navy/80">Support that adapts</p>
                                 <p className="mt-8 text-3xl font-semibold">1:1 guidance</p>
                                 <p className="mt-3 text-sm leading-6 text-brand-on-navy/80">
@@ -52,12 +52,12 @@ export default function Hero() {
                                 </p>
                             </div>
                         </AnimateIn>
-                        <AnimateIn delay={0.4}>
-                            <div className="rounded-[1.5rem] bg-brand-gold-soft p-6 text-brand-navy">
+                        <AnimateIn delay={0.4} className="h-full">
+                            <div className="h-full rounded-[1.5rem] bg-brand-gold-soft p-6 text-brand-navy">
                                 <HeartHandshake className="size-8" />
                                 <p className="mt-6 text-2xl font-semibold">Family-centered</p>
                                 <p className="mt-3 text-sm leading-6 text-brand-navy/80">
-                                    Clear communication for all involved in the learning journey - learners, parents/guardians - we are all working towards the same goal.
+                                    Clear communication for all involved in the learning journey, learners, parents/guardians. We are all working towards the same goal.
                                 </p>
                             </div>
                         </AnimateIn>

@@ -67,6 +67,7 @@ const services: Service[] = [
             "Structured literacy program - Intensive, Explicit, Systematic and focused instruction.",
             "Home practice materials",
             "Regular progress updates for parents",
+            "In-person or online options available"
         ],
         price: "From €45",
         priceNote: "per session",
