@@ -1,3 +1,4 @@
+import Link from "next/link";
 import { AnimateIn } from "../AnimateIn";
 
 export default function VideoSection({ youtubeUrl }: { youtubeUrl: string }) {
@@ -26,6 +27,18 @@ export default function VideoSection({ youtubeUrl }: { youtubeUrl: string }) {
                         />
                     </div>
                 </div>
+                <p className="mt-5 text-base leading-7 text-brand-muted">
+                    Follow this link to our{' '}
+                    <Link
+                        className="font-semibold text-brand-navy underline decoration-brand-gold-strong underline-offset-4 transition-colors hover:text-brand-gold-strong"
+                        href="https://www.youtube.com/@Neuro-literacystudio"
+                        target="_blank"
+                        rel="noreferrer"
+                    >
+                        YouTube channel
+                    </Link>{' '}
+                    to find out more about our services.
+                </p>
             </AnimateIn>
         </section>
     );

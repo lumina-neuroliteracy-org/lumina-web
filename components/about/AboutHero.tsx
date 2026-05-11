@@ -35,10 +35,12 @@ export default function AboutHero() {
                         variant="outline"
                         className="rounded-full border-brand-on-navy/40 bg-transparent px-6 text-brand-on-navy hover:bg-brand-on-navy/10 hover:text-brand-on-navy"
                     >
-                        <a href="#video">
+                        <Link href="https://www.youtube.com/@Neuro-literacystudio"
+                        target="_blank"
+                        >
                             <Play className="size-4" />
                             Watch intro video
-                        </a>
+                        </Link>
                     </Button>
                     <Button
                         asChild

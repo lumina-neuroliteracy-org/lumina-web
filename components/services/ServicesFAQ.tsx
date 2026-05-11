@@ -29,7 +29,7 @@ const faqs = [
     {
         question: "Are sessions in-person or online?",
         answer:
-            "We offer both. Online sessions are delivered via a secure video platform with shared digital materials. In-person availability depends on location — contact us to check.",
+            "We offer both. Online sessions are delivered via a secure video platform with shared digital materials. In-person availability depends on location,ß contact us to check.",
     },
     {
         question: "What happens after the initial consultation?",

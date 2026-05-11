@@ -59,7 +59,7 @@ export default function CommonSigns() {
                     Common signs
                 </p>
                 <h2 className="mt-3 max-w-2xl text-3xl font-semibold tracking-tight text-brand-navy lg:text-4xl">
-                    What to look, or look out for.
+                    What to look out for.
                 </h2>
             </AnimateIn>
 

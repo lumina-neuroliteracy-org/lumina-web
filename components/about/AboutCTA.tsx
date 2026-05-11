@@ -27,7 +27,7 @@ export default function AboutCTA() {
                             className="rounded-full px-6"
                         >
                             {/* Replace href with your YouTube video URL */}
-                            <a href="https://youtube.com" target="_blank" rel="noopener noreferrer">
+                            <a href="https://www.youtube.com/@Neuro-literacystudio" target="_blank" rel="noopener noreferrer">
                                 <Play className="size-4" />
                                 Watch intro video
                             </a>
