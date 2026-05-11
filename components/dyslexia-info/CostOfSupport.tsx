@@ -7,7 +7,7 @@ import type { LucideIcon } from "lucide-react";
 interface Tier {
     sessions: string;
     weekly: string;
-    daily: string;
+    daily: string | null;
     comparison: string;
     Icon: LucideIcon;
 }
@@ -30,14 +30,14 @@ const tiers: Tier[] = [
     {
         sessions: "3 sessions / week",
         weekly: "€150",
-        daily: "€21.43",
+        daily: "",
         comparison: "Family trip to the cinema or zoo + Happy Meal",
         Icon: Clapperboard,
     },
     {
         sessions: "4 sessions / week",
         weekly: "€180",
-        daily: "€25.71",
+        daily: null,
         comparison: "Weekly family food shop",
         Icon: ShoppingCart,
     },
@@ -76,14 +76,16 @@ export default function CostOfSupport() {
                             </div>
 
                             <div className="flex items-center justify-center">
-                                <div className="rounded-full bg-brand-gold-soft px-5 py-2 text-center">
-                                    <span className="text-xl font-bold text-brand-gold-strong">
-                                        {tier.daily}
-                                    </span>
-                                    <span className="ml-1 text-xs font-medium text-brand-gold-strong/70">
-                                        / day
-                                    </span>
-                                </div>
+                                {tier.daily ? (
+                                    <div className="rounded-full bg-brand-gold-soft px-5 py-2 text-center">
+                                        <span className="text-xl font-bold text-brand-gold-strong">
+                                            {tier.daily}
+                                        </span>
+                                        <span className="ml-1 text-xs font-medium text-brand-gold-strong/70">
+                                            / day
+                                        </span>
+                                    </div>
+                                ) : null}
                             </div>
 
                             <div className="flex items-center gap-3 sm:justify-end">

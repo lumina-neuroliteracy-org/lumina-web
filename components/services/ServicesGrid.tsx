@@ -64,7 +64,7 @@ const services: Service[] = [
             "Ongoing 1:1 sessions using structured literacy techniques, tailored to the learner's pace, strengths, and current level.",
         includes: [
             "Weekly sessions",
-            "Structured literacy program - Intensive, Explicit, Systematic and focused instruction.",
+            "Structured literacy program - Intensive, Explicit, Systematic and focused instruction based Orton Gillingham principles.",
             "Home practice materials",
             "Regular progress updates for parents",
             "In-person or online options available"
