@@ -17,6 +17,7 @@ interface Service {
     price: string;
     priceNote: string;
     priceTiers?: PriceTier[];
+    disclaimer?: string;
     bookingHref?: string;
     whatsappMessage?: string;
 }
@@ -52,9 +53,11 @@ const services: Service[] = [
             "Full diagnostic phonological awareness and literacy assessment",
             "Detailed written report",
             "Collaborative agreement based on assessment findings to tailor program to the learner's specific needs",
+            "Individualized learning plan."
         ],
-        price: "€100",
-        priceNote: "initial assessment",
+        price: "Free",
+        priceNote: "included with tuition",
+        disclaimer: "This is a literacy screening/placement assessment designed to identify learning gaps and inform instruction. It is not a clinical diagnosis.",
         bookingHref: "https://tidycal.com/104qe7v/individual-dyslexia-tutoring-session",
     },
     {
@@ -64,7 +67,7 @@ const services: Service[] = [
             "Ongoing 1:1 sessions using structured literacy techniques, tailored to the learner's pace, strengths, and current level.",
         includes: [
             "Weekly sessions",
-            "Structured literacy program - Intensive, Explicit, Systematic and focused instruction.",
+            "Structured literacy program - Intensive, Explicit, Systematic and focused instruction based Orton Gillingham principles.",
             "Home practice materials",
             "Regular progress updates for parents",
             "In-person or online options available"
@@ -163,6 +166,11 @@ export default function ServicesGrid() {
                                         </p>
                                         <p className="text-xs text-brand-muted">{service.priceNote}</p>
                                     </div>
+                                )}
+                                {service.disclaimer && (
+                                    <p className="text-xs italic text-brand-muted/70">
+                                        {service.disclaimer}
+                                    </p>
                                 )}
                                 <div className="flex justify-end">
                                     <Button asChild className="rounded-full px-6">

@@ -19,8 +19,18 @@ const lexend = Lexend({
 });
 
 export const metadata: Metadata = {
-  title: "Lumina",
-  description: "Accessibility-first learning support for dyslexia journeys.",
+  metadataBase: new URL("https://luminaneuroliteracy.ie"),
+  title: {
+    default: "Lumina Neuro-Literacy Studio",
+    template: "%s | Lumina Neuro-Literacy Studio",
+  },
+  description:
+    "Specialist dyslexia tuition and literacy support for children and adults in Ireland. Expert-led, accessibility-first sessions online and in-person.",
+  openGraph: {
+    siteName: "Lumina Neuro-Literacy Studio",
+    locale: "en_IE",
+    type: "website",
+  },
 };
 
 export default function RootLayout({

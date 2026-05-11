@@ -24,7 +24,7 @@ const faqs = [
     {
         question: "How many tuition sessions will my child need?",
         answer:
-            "This varies depending on the learner's current level and goals. All learners see meaningful progress within 10–12 weeks of consistent weekly sessions. We review progress regularly and adjust the plan as needed.",
+            "This varies depending on the learner's current level and goals. All learners see meaningful progress within 8–12 weeks of consistent weekly sessions. We review progress regularly and adjust the plan as needed.",
     },
     {
         question: "Are sessions in-person or online?",
