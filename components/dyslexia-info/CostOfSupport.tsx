@@ -125,7 +125,7 @@ export default function CostOfSupport() {
                     </p>
                     <p className="mt-4 max-w-2xl text-base leading-7 text-brand-on-navy/80">
                         We&apos;re not saying don&apos;t go on holiday. We&apos;re saying the cost
-                        of our specialist literacy support is smaller than you&apos;d think — and
+                        of our specialist literacy support is smaller than you&apos;d think, and
                         lasts far longer than a tan.
                     </p>
 

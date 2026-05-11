@@ -17,6 +17,7 @@ interface Service {
     price: string;
     priceNote: string;
     priceTiers?: PriceTier[];
+    disclaimer?: string;
     bookingHref?: string;
     whatsappMessage?: string;
 }
@@ -52,9 +53,11 @@ const services: Service[] = [
             "Full diagnostic phonological awareness and literacy assessment",
             "Detailed written report",
             "Collaborative agreement based on assessment findings to tailor program to the learner's specific needs",
+            "Individualized learning plan."
         ],
-        price: "€100",
-        priceNote: "initial assessment",
+        price: "Free",
+        priceNote: "included with tuition",
+        disclaimer: "This is a literacy screening/placement assessment designed to identify learning gaps and inform instruction. It is not a clinical diagnosis.",
         bookingHref: "https://tidycal.com/104qe7v/individual-dyslexia-tutoring-session",
     },
     {
@@ -163,6 +166,11 @@ export default function ServicesGrid() {
                                         </p>
                                         <p className="text-xs text-brand-muted">{service.priceNote}</p>
                                     </div>
+                                )}
+                                {service.disclaimer && (
+                                    <p className="text-xs italic text-brand-muted/70">
+                                        {service.disclaimer}
+                                    </p>
                                 )}
                                 <div className="flex justify-end">
                                     <Button asChild className="rounded-full px-6">
