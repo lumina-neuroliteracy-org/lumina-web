@@ -1,4 +1,17 @@
+import type { Metadata } from "next";
 import ServicesHero from "@/components/services/ServicesHero";
+
+export const metadata: Metadata = {
+  title: "Our Services",
+  description:
+    "Explore Lumina's specialist dyslexia tuition services — one-to-one sessions, group workshops, and assessments for children and adults in Ireland.",
+  openGraph: {
+    title: "Our Services | Lumina Neuro-Literacy Studio",
+    description:
+      "One-to-one dyslexia tuition, group workshops, and literacy assessments for children and adults across Ireland.",
+    url: "/services",
+  },
+};
 import ServicesGrid from "@/components/services/ServicesGrid";
 import WorkshopsSection from "@/components/services/WorkshopsSection";
 import HowItWorks from "@/components/services/HowItWorks";
