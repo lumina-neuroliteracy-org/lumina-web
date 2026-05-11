@@ -10,6 +10,7 @@ import {
     SidebarMenu,
     SidebarMenuButton,
     SidebarMenuItem,
+    useSidebar,
 } from "@/components/ui/sidebar";
 import Image from "next/image";
 import logo from "@/public/lumina-logo.png";
@@ -23,6 +24,7 @@ const navLinks = [
 ];
 
 export function MobileNavSidebar() {
+    const { setOpenMobile } = useSidebar();
     return (
         <Sidebar side="left" collapsible="offcanvas" className="lg:hidden">
             {/* Brand header */}
@@ -44,7 +46,7 @@ export function MobileNavSidebar() {
                     {navLinks.map(({ label, href }) => (
                         <SidebarMenuItem key={href}>
                             <SidebarMenuButton asChild size="lg" className="text-base font-medium">
-                                <Link href={href}>{label}</Link>
+                                <Link href={href} onClick={() => setOpenMobile(false)}>{label}</Link>
                             </SidebarMenuButton>
                         </SidebarMenuItem>
                     ))}
