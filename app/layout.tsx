@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import { Geist, Geist_Mono, Lexend } from "next/font/google";
 import { Toaster } from "@/components/ui/sonner";
+import JsonLd from "@/components/JsonLd";
 import "./globals.css";
 
 const geistSans = Geist({
@@ -19,7 +20,7 @@ const lexend = Lexend({
 });
 
 export const metadata: Metadata = {
-  metadataBase: new URL("https://luminaneuroliteracy.ie"),
+  metadataBase: new URL("https://www.lumina-literacy.ie"),
   title: {
     default: "Lumina Neuro-Literacy Studio",
     template: "%s | Lumina Neuro-Literacy Studio",
@@ -44,6 +45,7 @@ export default function RootLayout({
       className={`${geistSans.variable} ${geistMono.variable} ${lexend.variable} h-full antialiased`}
     >
       <body className="min-h-full bg-brand-surface text-foreground">
+        <JsonLd />
         {children}
         <Toaster />
       </body>
