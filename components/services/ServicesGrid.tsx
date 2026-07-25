@@ -107,7 +107,7 @@ export default function ServicesGrid() {
                     Our services
                 </p>
                 <h2 className="mt-3 max-w-2xl text-3xl font-semibold tracking-tight text-brand-navy lg:text-4xl">
-                    Practical help for every stage of the journey.
+                    Practical Dyslexia help for every stage of the journey.
                 </h2>
             </AnimateIn>
 

@@ -15,14 +15,12 @@ export default function Hero() {
                 </AnimateIn>
                 <AnimateIn delay={0.1}>
                     <h1 className="mt-6 text-5xl font-semibold tracking-tight text-balance text-brand-navy sm:text-6xl">
-                        A clearer path for learners navigating dyslexia.
+                       Dyslexia & Literacy Support for Children in Dublin, Ireland.
                     </h1>
                 </AnimateIn>
                 <AnimateIn delay={0.2}>
                     <p className="mt-6 max-w-xl text-lg leading-8 text-brand-muted">
-                        Lumina helps families, schools, and communities understand
-                        dyslexia, access practical support, and move from uncertainty to
-                        an actionable learning plan.
+                        Lumina Neuro-Literacy Studio provides specialist dyslexia tutoring and structured literacy support for children and families across Dublin, Ireland. We help learners build confidence, improve reading and spelling skills, and achieve lasting academic success.
                     </p>
                 </AnimateIn>
                 <AnimateIn delay={0.3}>
@@ -41,23 +39,23 @@ export default function Hero() {
             </div>
 
             <AnimateIn delay={0.2} direction="right">
-                <div className="rounded-[2rem] border border-border bg-brand-card p-6 shadow-[0_30px_80px_-40px_rgba(15,23,42,0.25)]">
+                <div className="rounded-[2rem] border border-border bg-brand-card p-4 shadow-[0_30px_80px_-40px_rgba(15,23,42,0.25)]">
                     <div className="grid gap-4 sm:grid-cols-2">
                         <AnimateIn delay={0.3} className="h-full">
                             <div className="h-full rounded-[1.5rem] bg-brand-navy p-6 text-brand-on-navy">
-                                <p className="text-sm text-brand-on-navy/80">Support that adapts</p>
-                                <p className="mt-8 text-3xl font-semibold">1:1 guidance</p>
+                                {/* <p className="text-sm text-brand-on-navy/80">Support that adapts</p> */}
+                                <p className="mt-8 text-3xl font-semibold">One-to-One Dyslexia Tutoring</p>
                                 <p className="mt-3 text-sm leading-6 text-brand-on-navy/80">
-                                    Intensive, explicit and focused interventions grounded in structured literacy shaped around the learner instead of a one-size-fits-all script.
+                                Our personalised dyslexia tutoring sessions use evidence-based structured literacy methods to improve reading, spelling, writing, and confidence. Every learning plan is tailored to the child&apos;s individual needs.
                                 </p>
                             </div>
                         </AnimateIn>
                         <AnimateIn delay={0.4} className="h-full">
                             <div className="h-full rounded-[1.5rem] bg-brand-gold-soft p-6 text-brand-navy">
                                 <HeartHandshake className="size-8" />
-                                <p className="mt-6 text-2xl font-semibold">Family-centered</p>
+                                <p className="mt-6 text-2xl font-semibold">Family-Centred Dyslexia Support</p>
                                 <p className="mt-3 text-sm leading-6 text-brand-navy/80">
-                                    Clear communication for all involved in the learning journey, learners, parents/guardians. We are all working towards the same goal.
+                                 We work closely with parents, guardians, and schools to ensure every learner receives consistent support both at home and in the classroom.
                                 </p>
                             </div>
                         </AnimateIn>

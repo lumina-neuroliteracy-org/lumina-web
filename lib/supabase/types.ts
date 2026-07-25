@@ -65,3 +65,26 @@ export interface SiteSetting {
     value: string;
     updated_at: string;
 }
+
+export interface BlogCategory {
+    id: string;
+    name: string;
+    created_at: string;
+}
+
+export interface BlogPost {
+    id: string;
+    slug: string;
+    title: string;
+    excerpt: string | null;
+    category: string | null;
+    cover_image_url: string | null;
+    content: Array<{ heading?: string; body: string }>;
+    read_time: string | null;
+    featured: boolean;
+    is_published: boolean;
+    publish_at: string | null; // null = publish immediately, future ISO string = scheduled
+    created_by: string | null;
+    created_at: string;
+    updated_at: string;
+}

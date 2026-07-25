@@ -20,6 +20,7 @@ const navLinks = [
     { label: "About", href: "/about" },
     { href: "/services", label: "Services" },
     { label: "Dyslexia Info", href: "/dyslexia-info" },
+    { label: "Blog", href: "/blog" },
     { label: "Contact", href: "/contact" },
 ];
 

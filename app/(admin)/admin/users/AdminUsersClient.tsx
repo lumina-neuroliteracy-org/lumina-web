@@ -174,7 +174,8 @@ export function AdminUsersClient({
                                                         ? "Saving…"
                                                         : p.role === "student"
                                                           ? "Promote to Admin"
-                                                          : "Demote to Student"}
+                                                          : "Demote to Student"
+                                                          }
                                                 </Button>
                                             ) : (
                                                 <span className="text-xs text-brand-muted italic">

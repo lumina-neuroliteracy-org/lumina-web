@@ -2,7 +2,7 @@
 
 import Link from "next/link";
 import { usePathname, useRouter } from "next/navigation";
-import { LayoutDashboard, Video, FileText, Users, LogOut, Menu, X, CalendarDays, User, Settings2 } from "lucide-react";
+import { LayoutDashboard, Video, FileText, Users, LogOut, Menu, X, CalendarDays, User, Settings2, BookOpen } from "lucide-react";
 import { useState } from "react";
 import { createClient } from "@/lib/supabase/client";
 import type { Profile } from "@/lib/supabase/types";
@@ -13,6 +13,7 @@ const navItems = [
     { href: "/admin/live-classes", label: "Live Classes", icon: Video },
     { href: "/admin/resources", label: "Resources", icon: FileText },
     { href: "/admin/events", label: "Events", icon: CalendarDays },
+    { href: "/admin/blog", label: "Blog", icon: BookOpen },
     { href: "/admin/users", label: "Users", icon: Users },
     { href: "/admin/profile", label: "Profile", icon: User },
     { href: "/admin/settings", label: "Site Settings", icon: Settings2 },

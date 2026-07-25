@@ -1,11 +1,20 @@
 import type { MetadataRoute } from "next";
+import { getAllPublishedPosts } from "@/lib/dal/blog";
 
 const BASE_URL = "https://www.lumina-literacy.ie";
 
 // Public, indexable marketing pages. Auth, admin, student, and coming-soon
 // routes are intentionally excluded (see robots.ts).
-export default function sitemap(): MetadataRoute.Sitemap {
+export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
   const lastModified = new Date();
+  const posts = await getAllPublishedPosts();
+
+  const blogPostEntries: MetadataRoute.Sitemap = posts.map((post) => ({
+    url: `${BASE_URL}/blog/${post.slug}`,
+    lastModified: new Date(post.updated_at),
+    changeFrequency: "weekly",
+    priority: 0.7,
+  }));
 
   return [
     {
@@ -24,6 +33,12 @@ export default function sitemap(): MetadataRoute.Sitemap {
       url: `${BASE_URL}/services`,
       lastModified,
       changeFrequency: "monthly",
+      priority: 0.8,
+    },
+    {
+      url: `${BASE_URL}/blog`,
+      lastModified,
+      changeFrequency: "weekly",
       priority: 0.8,
     },
     {
@@ -50,5 +65,6 @@ export default function sitemap(): MetadataRoute.Sitemap {
       changeFrequency: "yearly",
       priority: 0.3,
     },
+    ...blogPostEntries,
   ];
 }
