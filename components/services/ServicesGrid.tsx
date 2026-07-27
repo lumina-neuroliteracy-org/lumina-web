@@ -62,7 +62,7 @@ const services: Service[] = [
     },
     {
         icon: GraduationCap,
-        title: "Specialist Dyslexia Tuition",
+        title: "Specialist Dyslexia Tutor",
         description:
             "Ongoing 1:1 sessions using structured literacy techniques, tailored to the learner's pace, strengths, and current level.",
         includes: [

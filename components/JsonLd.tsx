@@ -8,7 +8,7 @@ const jsonLd = {
   "@id": `${SITE_URL}/#organization`,
   name: "Lumina Neuro-Literacy Studio",
   description:
-    "Specialist dyslexia tuition and literacy support for children and adults across Ireland. Expert-led, accessibility-first sessions online and in-person.",
+    "Specialist dyslexia tutor and literacy support for children and adults across Ireland. Expert-led, accessibility-first sessions online and in-person.",
   url: SITE_URL,
   logo: `${SITE_URL}/lumina-logo.png`,
   image: `${SITE_URL}/opengraph-image`,
@@ -23,7 +23,7 @@ const jsonLd = {
     addressCountry: "IE",
   },
   knowsAbout: [
-    "Dyslexia tuition",
+    "Dyslexia tutor",
     "Literacy support",
     "Neuro-literacy",
     "Specialist teaching",

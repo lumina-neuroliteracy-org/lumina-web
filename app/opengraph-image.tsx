@@ -2,7 +2,7 @@ import { ImageResponse } from "next/og";
 
 // Route-wide default social sharing image, generated at build time.
 export const alt =
-  "Lumina Neuro-Literacy Studio — Specialist dyslexia tuition and literacy support in Ireland";
+  "Lumina Neuro-Literacy Studio — Specialist dyslexia tutor and literacy support in Ireland";
 export const size = { width: 1200, height: 630 };
 export const contentType = "image/png";
 
@@ -44,7 +44,7 @@ export default function Image() {
 
         <div style={{ display: "flex", flexDirection: "column", gap: "24px" }}>
           <span style={{ fontSize: "68px", fontWeight: 700, lineHeight: 1.1 }}>
-            Specialist Dyslexia Tuition
+            Specialist Dyslexia Tutor
           </span>
           <span style={{ fontSize: "36px", color: "#cbd5e1", maxWidth: "900px" }}>
             Expert-led, accessibility-first literacy support for children and

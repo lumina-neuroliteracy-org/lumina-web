@@ -14,9 +14,9 @@ export default function AboutPhilosophy() {
             <AnimateIn delay={0.15}>
                 <blockquote className="mt-8 border-l-4 border-brand-gold pl-6">
                     <p className="text-xl font-medium italic leading-8 text-brand-navy">
-                        "A child who struggles to read is not a child who cannot learn, they
+                        &ldquo;A child who struggles to read is not a child who cannot learn, they
                         are a child who has not yet been taught in the way that works for
-                        them."
+                        them.&rdquo;
                     </p>
                 </blockquote>
             </AnimateIn>
@@ -26,11 +26,11 @@ export default function AboutPhilosophy() {
                         We measure success in small, compounding wins, a word decoded
                         without hesitation, a paragraph read aloud without dread, a learner
                         who raises their hand in class for the first time. These moments
-                        don't happen by accident. They happen through consistency, patience,
+                        don&apos;t happen by accident. They happen through consistency, patience,
                         and a plan built for that specific person.
                     </p>
                     <p>
-                        Our tuition is not a quick fix, it's a partnership and a step by step approach to long lasting results. We take that responsibility seriously for every family and school that trusts us with their learner.
+                        Our tuition is not a quick fix, it&apos;s a partnership and a step by step approach to long lasting results. We take that responsibility seriously for every family and school that trusts us with their learner.
                     </p>
                 </div>
             </AnimateIn>

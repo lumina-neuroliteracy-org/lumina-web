@@ -7,7 +7,7 @@ export default function manifest(): MetadataRoute.Manifest {
     name: "Lumina Neuro-Literacy Studio",
     short_name: "Lumina",
     description:
-      "Specialist dyslexia tuition and literacy support for children and adults across Ireland.",
+      "Specialist dyslexia tutor and literacy support for children and adults across Ireland.",
     start_url: "/",
     display: "standalone",
     background_color: "#f2f3fa",
