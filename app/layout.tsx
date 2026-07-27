@@ -26,7 +26,7 @@ export const metadata: Metadata = {
     template: "%s | Lumina Neuro-Literacy Studio",
   },
   description:
-    "Specialist dyslexia tuition and literacy support for children and adults in Ireland. Expert-led, accessibility-first sessions online and in-person.",
+    "Specialist dyslexia tutor and literacy support for children and adults in Ireland. Expert-led, accessibility-first sessions online and in-person.",
   openGraph: {
     siteName: "Lumina Neuro-Literacy Studio",
     locale: "en_IE",
