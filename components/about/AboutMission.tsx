@@ -17,7 +17,7 @@ export default function AboutMission() {
                         Lumina was founded on a simple conviction: that dyslexia is not a barrier to brilliance but rather the style of teaching is the barrier and that not enough access to expertise is available. Too many learners spend too long feeling less than, or left behind before someone spots what is happening and how to help.
                     </p>
                     <p>
-                        We exist to break that barrier to access, to expertise and to brilliance. From the first conversation to a diagnostic assessment and road map to a structured literacy plan. Watch your child's confidence and achievements bloom as every step is designed around the learner's individual and specific needs, not a checklist for what has been covered but not learned, or a standardised curriculum that leaves neuro diverse learners behind or one-size-fits-all programs that are hit and miss. Stop guessing, start glowing with the Lumina Neuro-Literacy Studio approach.
+                        We exist to break that barrier to access, to expertise and to brilliance. From the first conversation to a diagnostic assessment and road map to a structured literacy plan. Watch your child&apos;s confidence and achievements bloom as every step is designed around the learner&apos;s individual and specific needs, not a checklist for what has been covered but not learned, or a standardised curriculum that leaves neuro diverse learners behind or one-size-fits-all programs that are hit and miss. Stop guessing, start glowing with the Lumina Neuro-Literacy Studio approach.
                     </p>
                 </div>
             </AnimateIn>

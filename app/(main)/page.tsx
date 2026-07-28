@@ -4,7 +4,7 @@ import Homepage from "@/components/homepage/Homepage";
 export const metadata: Metadata = {
   title: "Specialist Dyslexia Tutor in Ireland",
   description:
-    "Lumina Neuro-Literacy Studio offers specialist dyslexia tuition and literacy support for children and adults across Ireland. Book a free consultation today.",
+    "Lumina Neuro-Literacy Studio offers specialist dyslexia tutor and literacy support for children and adults across Ireland. Book a free consultation today.",
   openGraph: {
     title: "Lumina Neuro-Literacy Studio",
     description:

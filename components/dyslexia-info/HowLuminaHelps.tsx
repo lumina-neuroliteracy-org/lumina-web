@@ -18,7 +18,7 @@ const cards: HelpCard[] = [
     },
     {
         icon: GraduationCap,
-        title: "Expert Dyslexia Specialist Tuition",
+        title: "Expert Dyslexia Specialist Tutor",
         description:
             "1:1 Structured literacy sessions delivered by an expert dyslexia specialist with experience teaching in a reading intervention school and with the Dyslexia Association of Ireland.",
     },

@@ -20,7 +20,7 @@ export default function Hero() {
                 </AnimateIn>
                 <AnimateIn delay={0.2}>
                     <p className="mt-6 max-w-xl text-lg leading-8 text-brand-muted">
-                        Lumina Neuro-Literacy Studio provides specialist dyslexia tutoring and structured literacy support for children and families across Dublin, Ireland. We help learners build confidence, improve reading and spelling skills, and achieve lasting academic success.
+                        Lumina Neuro-Literacy Studio provides specialist dyslexia tutor and structured literacy support for children and families across Dublin, Ireland. We help learners build confidence, improve reading and spelling skills, and achieve lasting academic success.
                     </p>
                 </AnimateIn>
                 <AnimateIn delay={0.3}>

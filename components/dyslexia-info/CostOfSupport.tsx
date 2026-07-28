@@ -54,7 +54,7 @@ export default function CostOfSupport() {
                     The Real Cost of Support
                 </h2>
                 <p className="mt-4 max-w-xl text-base leading-7 text-brand-muted">
-                    What does our specialist dyslexia tuition actually cost per day?
+                    What does our specialist dyslexia tutoring actually cost per day?
                 </p>
             </AnimateIn>
 

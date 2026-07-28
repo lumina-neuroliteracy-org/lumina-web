@@ -4,7 +4,7 @@ import BlogHero from "@/components/blog/BlogHero";
 import BlogGrid from "@/components/blog/BlogGrid";
 
 export const metadata: Metadata = {
-    title: "Blog",
+    title: "Dyslexia Blog",
     description:
         "Practical insights on dyslexia, structured literacy, and supporting every learner to thrive.",
     alternates: {
@@ -12,7 +12,7 @@ export const metadata: Metadata = {
     },
     openGraph: {
         type: "website",
-        title: "Blog | Lumina Neuro-Literacy Studio",
+        title: "Dyslexia Blog | Lumina Neuro-Literacy Studio",
         description:
             "Practical insights on dyslexia, structured literacy, and supporting every learner to thrive.",
         url: "https://www.lumina-literacy.ie/blog",
