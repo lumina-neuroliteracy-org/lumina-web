@@ -102,7 +102,7 @@ const services: Service[] = [
         total: "€150",
         perSession: "€50 each",
         bookingHref:
-          "https://tidycal.com/104qe7v/individual-dyslexia-tutoring-session",
+          "https://tidycal.com/104qe7v/individual-dyslexia-tutoring-3session",
       },
       {
         label: "4 sessions per week",
