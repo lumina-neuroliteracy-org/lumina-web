@@ -44,9 +44,11 @@ const BADGE_COLORS: Record<string, string> = {
 export function ResourceCard({
     resource,
     isAdmin = false,
+    students = [],
 }: {
     resource: Resource;
     isAdmin?: boolean;
+    students?: { id: string; full_name: string | null }[];
 }) {
     const router = useRouter();
     const [editing, setEditing] = useState(false);
@@ -138,6 +140,7 @@ export function ResourceCard({
                 <ResourceFormDialog
                     existing={resource}
                     onClose={() => setEditing(false)}
+                    students={students}
                 />
             )}
 

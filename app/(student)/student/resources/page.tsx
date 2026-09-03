@@ -1,9 +1,11 @@
 import { getPublishedResources } from "@/lib/dal/resources";
+import { requireAuth } from "@/lib/dal/profile";
 import { ResourceCard } from "@/components/dashboard/ResourceCard";
 import { BookOpen } from "lucide-react";
 
 export default async function StudentResourcesPage() {
-    const resources = await getPublishedResources();
+    const profile = await requireAuth();
+    const resources = await getPublishedResources(profile.id);
 
     return (
         <div className="space-y-6">

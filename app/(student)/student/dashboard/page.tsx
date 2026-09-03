@@ -5,10 +5,10 @@ import { Video, BookOpen, CalendarDays } from "lucide-react";
 import Link from "next/link";
 
 export default async function StudentDashboardPage() {
-    const [profile, liveClasses, resources] = await Promise.all([
-        requireAuth(),
+    const profile = await requireAuth();
+    const [liveClasses, resources] = await Promise.all([
         getActiveLiveClasses(),
-        getPublishedResources(),
+        getPublishedResources(profile.id),
     ]);
 
     const nextClass = liveClasses[0];

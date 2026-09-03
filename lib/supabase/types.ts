@@ -29,6 +29,7 @@ export interface Resource {
     file_url: string;
     file_type: string;
     created_by: string;
+    assigned_to: string | null; // null = visible to all students; UUID = specific student only
     is_published: boolean;
     created_at: string;
     updated_at: string;

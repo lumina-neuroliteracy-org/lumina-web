@@ -32,9 +32,11 @@ function extFromUrl(url: string): string {
 export function ResourceFormDialog({
     existing,
     onClose,
+    students = [],
 }: {
     existing?: Resource;
     onClose: () => void;
+    students?: { id: string; full_name: string | null }[];
 }) {
     const router = useRouter();
     const supabase = createClient();
@@ -44,6 +46,7 @@ export function ResourceFormDialog({
     const [fileType, setFileType] = useState<string>(existing?.file_type ?? "");
     const [fileUrl, setFileUrl] = useState(existing?.file_url ?? "");
     const [file, setFile] = useState<File | null>(null);
+    const [assignedTo, setAssignedTo] = useState<string>(existing?.assigned_to ?? "");
     const [isPublished, setIsPublished] = useState(existing?.is_published ?? false);
     const [loading, setLoading] = useState(false);
     const [error, setError] = useState<string | null>(null);
@@ -86,6 +89,7 @@ export function ResourceFormDialog({
                 description: description || null,
                 file_url: resolvedUrl,
                 file_type: fileType || "other",
+                assigned_to: assignedTo || null,
                 is_published: isPublished,
             };
 
@@ -184,6 +188,28 @@ export function ResourceFormDialog({
                             className="rounded-xl"
                         />
                     </div>
+
+                    {students.length > 0 && (
+                        <div className="space-y-1.5">
+                            <Label htmlFor="res-assigned">Assign to student</Label>
+                            <select
+                                id="res-assigned"
+                                value={assignedTo}
+                                onChange={(e) => setAssignedTo(e.target.value)}
+                                className="w-full rounded-xl border border-input bg-background px-3 py-2 text-sm focus:outline-none focus:ring-2 focus:ring-ring"
+                            >
+                                <option value="">All students</option>
+                                {students.map((s) => (
+                                    <option key={s.id} value={s.id}>
+                                        {s.full_name ?? s.id}
+                                    </option>
+                                ))}
+                            </select>
+                            <p className="text-xs text-brand-muted">
+                                Leave as &quot;All students&quot; to make it visible to everyone.
+                            </p>
+                        </div>
+                    )}
 
                     <label className="flex items-center gap-2 text-sm">
                         <input

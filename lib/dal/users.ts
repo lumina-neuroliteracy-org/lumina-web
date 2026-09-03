@@ -3,6 +3,18 @@ import { createClient } from "@/lib/supabase/server";
 import { createAdminClient } from "@/lib/supabase/admin";
 import type { UserListEntry } from "@/lib/supabase/types";
 
+export async function getStudentProfiles(): Promise<{ id: string; full_name: string | null }[]> {
+    const supabase = await createClient();
+    const { data, error } = await supabase
+        .from("profiles")
+        .select("id, full_name")
+        .eq("role", "student")
+        .eq("is_active", true)
+        .order("full_name", { ascending: true });
+    if (error) throw new Error(error.message);
+    return data ?? [];
+}
+
 export async function getAllProfiles(): Promise<UserListEntry[]> {
     const [supabase, admin] = await Promise.all([
         createClient(),

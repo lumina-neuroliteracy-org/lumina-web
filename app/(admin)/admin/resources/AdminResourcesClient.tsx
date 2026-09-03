@@ -9,8 +9,10 @@ import type { Resource } from "@/lib/supabase/types";
 
 export function AdminResourcesClient({
     resources,
+    students,
 }: {
     resources: Resource[];
+    students: { id: string; full_name: string | null }[];
 }) {
     const [creating, setCreating] = useState(false);
 
@@ -45,14 +47,14 @@ export function AdminResourcesClient({
                 ) : (
                     <div className="grid grid-cols-1 gap-4 sm:grid-cols-2 lg:grid-cols-3">
                         {resources.map((r) => (
-                            <ResourceCard key={r.id} resource={r} isAdmin />
+                            <ResourceCard key={r.id} resource={r} isAdmin students={students} />
                         ))}
                     </div>
                 )}
             </div>
 
             {creating && (
-                <ResourceFormDialog onClose={() => setCreating(false)} />
+                <ResourceFormDialog onClose={() => setCreating(false)} students={students} />
             )}
         </>
     );
