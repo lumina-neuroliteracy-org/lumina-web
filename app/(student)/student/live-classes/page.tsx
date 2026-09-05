@@ -1,9 +1,11 @@
 import { getActiveLiveClasses } from "@/lib/dal/live-classes";
+import { requireAuth } from "@/lib/dal/profile";
 import { LiveClassCard } from "@/components/dashboard/LiveClassCard";
 import { Video } from "lucide-react";
 
 export default async function StudentLiveClassesPage() {
-    const liveClasses = await getActiveLiveClasses();
+    const profile = await requireAuth();
+    const liveClasses = await getActiveLiveClasses(profile.id);
 
     return (
         <div className="space-y-6">

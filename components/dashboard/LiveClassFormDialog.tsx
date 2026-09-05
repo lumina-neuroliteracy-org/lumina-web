@@ -22,9 +22,11 @@ function toDatetimeLocal(iso: string) {
 export function LiveClassFormDialog({
     existing,
     onClose,
+    students = [],
 }: {
     existing?: LiveClass;
     onClose: () => void;
+    students?: { id: string; full_name: string | null }[];
 }) {
     const router = useRouter();
     const [title, setTitle] = useState(existing?.title ?? "");
@@ -34,6 +36,9 @@ export function LiveClassFormDialog({
     const [joinUrl, setJoinUrl] = useState(existing?.join_url ?? "");
     const [scheduledAt, setScheduledAt] = useState(
         existing ? toDatetimeLocal(existing.scheduled_at) : ""
+    );
+    const [assignedTo, setAssignedTo] = useState<string>(
+        existing?.assigned_to ?? ""
     );
     const [isActive, setIsActive] = useState(existing?.is_active ?? true);
     const [loading, setLoading] = useState(false);
@@ -49,6 +54,7 @@ export function LiveClassFormDialog({
             description: description || null,
             join_url: joinUrl,
             scheduled_at: new Date(scheduledAt).toISOString(),
+            assigned_to: assignedTo || null,
             is_active: isActive,
         };
 
@@ -124,6 +130,28 @@ export function LiveClassFormDialog({
                             className="rounded-xl"
                         />
                     </div>
+
+                    {students.length > 0 && (
+                        <div className="space-y-1.5">
+                            <Label htmlFor="lc-assigned">Assign to student</Label>
+                            <select
+                                id="lc-assigned"
+                                value={assignedTo}
+                                onChange={(e) => setAssignedTo(e.target.value)}
+                                className="w-full rounded-xl border border-input bg-background px-3 py-2 text-sm focus:outline-none focus:ring-2 focus:ring-ring"
+                            >
+                                <option value="">All students</option>
+                                {students.map((s) => (
+                                    <option key={s.id} value={s.id}>
+                                        {s.full_name ?? s.id}
+                                    </option>
+                                ))}
+                            </select>
+                            <p className="text-xs text-brand-muted">
+                                Leave as &quot;All students&quot; to make it visible to everyone.
+                            </p>
+                        </div>
+                    )}
 
                     <label className="flex items-center gap-2 text-sm">
                         <input

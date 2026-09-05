@@ -17,6 +17,7 @@ export interface LiveClass {
     join_url: string;
     scheduled_at: string;
     created_by: string;
+    assigned_to: string | null; // null = visible to all students; UUID = specific student only
     is_active: boolean;
     created_at: string;
     updated_at: string;
