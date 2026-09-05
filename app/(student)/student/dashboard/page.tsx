@@ -7,7 +7,7 @@ import Link from "next/link";
 export default async function StudentDashboardPage() {
     const profile = await requireAuth();
     const [liveClasses, resources] = await Promise.all([
-        getActiveLiveClasses(),
+        getActiveLiveClasses(profile.id),
         getPublishedResources(profile.id),
     ]);
 

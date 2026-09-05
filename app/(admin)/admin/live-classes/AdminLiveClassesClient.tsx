@@ -9,8 +9,10 @@ import type { LiveClass } from "@/lib/supabase/types";
 
 export function AdminLiveClassesClient({
     liveClasses,
+    students,
 }: {
     liveClasses: LiveClass[];
+    students: { id: string; full_name: string | null }[];
 }) {
     const [creating, setCreating] = useState(false);
 
@@ -45,14 +47,22 @@ export function AdminLiveClassesClient({
                 ) : (
                     <div className="grid grid-cols-1 gap-4 sm:grid-cols-2 lg:grid-cols-3">
                         {liveClasses.map((lc) => (
-                            <LiveClassCard key={lc.id} liveClass={lc} isAdmin />
+                            <LiveClassCard
+                                key={lc.id}
+                                liveClass={lc}
+                                isAdmin
+                                students={students}
+                            />
                         ))}
                     </div>
                 )}
             </div>
 
             {creating && (
-                <LiveClassFormDialog onClose={() => setCreating(false)} />
+                <LiveClassFormDialog
+                    onClose={() => setCreating(false)}
+                    students={students}
+                />
             )}
         </>
     );

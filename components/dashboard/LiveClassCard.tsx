@@ -21,9 +21,11 @@ function formatDate(iso: string) {
 export function LiveClassCard({
     liveClass,
     isAdmin = false,
+    students = [],
 }: {
     liveClass: LiveClass;
     isAdmin?: boolean;
+    students?: { id: string; full_name: string | null }[];
 }) {
     const router = useRouter();
     const [editing, setEditing] = useState(false);
@@ -108,6 +110,7 @@ export function LiveClassCard({
                 <LiveClassFormDialog
                     existing={liveClass}
                     onClose={() => setEditing(false)}
+                    students={students}
                 />
             )}
 
